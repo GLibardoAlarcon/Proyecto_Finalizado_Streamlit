@@ -1,0 +1,686 @@
+Model year,Make,Model,Vehicle size,Range (km),CO2 emissions (g/km),Recharge time (h)
+2012,Mitsubishi,i-MiEV,Small,100,0,7.0
+2012,Nissan,LEAF,Medium,117,0,7.0
+2013,Ford,Focus Electric,Small,122,0,4.0
+2013,Mitsubishi,i-MiEV,Small,100,0,7.0
+2013,Nissan,LEAF,Medium,117,0,7.0
+2013,smart,fortwo electric drive cabriolet,Large,109,0,8.0
+2013,smart,fortwo electric drive coupe,Large,109,0,8.0
+2013,Tesla,Model S (40 kWh),Medium,224,0,6.0
+2013,Tesla,Model S (60 kWh),Medium,335,0,10.0
+2013,Tesla,Model S (85 kWh),Medium,426,0,12.0
+2013,Tesla,Model S Performance,Medium,426,0,12.0
+2014,Chevrolet,Spark EV,Small,131,0,7.0
+2014,Ford,Focus Electric,Small,122,0,4.0
+2014,Mitsubishi,i-MiEV,Small,100,0,7.0
+2014,Nissan,LEAF,Medium,135,0,5.0
+2014,smart,fortwo electric drive cabriolet,Large,109,0,8.0
+2014,smart,fortwo electric drive coupe,Large,109,0,8.0
+2014,Tesla,Model S (60 kWh),Medium,335,0,10.0
+2014,Tesla,Model S (85 kWh),Medium,426,0,12.0
+2014,Tesla,Model S Performance,Medium,426,0,12.0
+2015,BMW,i3,Small,130,0,4.0
+2015,Chevrolet,Spark EV,Small,131,0,7.0
+2015,Ford,Focus Electric,Small,122,0,4.0
+2015,Kia,Soul EV,Large,149,0,4.0
+2015,Mitsubishi,i-MiEV,Small,100,0,7.0
+2015,Nissan,LEAF,Medium,135,0,5.0
+2015,smart,fortwo electric drive cabriolet,Large,109,0,8.0
+2015,smart,fortwo electric drive coupe,Large,109,0,8.0
+2015,Tesla,Model S (60 kWh),Medium,335,0,10.0
+2015,Tesla,Model S (70 kWh),Medium,377,0,12.0
+2015,Tesla,Model S (85/90 kWh),Medium,426,0,12.0
+2015,Tesla,Model S 70D,Medium,386,0,12.0
+2015,Tesla,Model S 85D/90D,Medium,435,0,12.0
+2015,Tesla,Model S P85D/P90D,Medium,407,0,12.0
+2016,BMW,i3,Small,130,0,4.0
+2016,Chevrolet,Spark EV,Small,131,0,7.0
+2016,Ford,Focus Electric,Small,122,0,4.0
+2016,Kia,Soul EV,Large,149,0,4.0
+2016,Mitsubishi,i-MiEV,Small,100,0,7.0
+2016,Nissan,LEAF (24 kWh),Medium,135,0,5.0
+2016,Nissan,LEAF (30 kWh),Medium,172,0,6.0
+2016,smart,fortwo electric drive cabriolet,Large,109,0,8.0
+2016,smart,fortwo electric drive coupe,Large,109,0,8.0
+2016,Tesla,Model S (60 kWh pre- 6/16),Medium,335,0,10.0
+2016,Tesla,Model S (60 kWh),Medium,338,0,10.0
+2016,Tesla,Model S (70 kWh),Medium,377,0,12.0
+2016,Tesla,Model S (75 kWh),Medium,401,0,12.0
+2016,Tesla,Model S (85/90 kWh),Medium,426,0,12.0
+2016,Tesla,Model S 60D,Medium,351,0,10.0
+2016,Tesla,Model S 70D,Medium,386,0,12.0
+2016,Tesla,Model S 75D,Medium,417,0,12.0
+2016,Tesla,Model S 85D/90D,Medium,435,0,12.0
+2016,Tesla,Model S 90D (Refresh),Medium,473,0,12.0
+2016,Tesla,Model S P85D/P90D,Medium,407,0,12.0
+2016,Tesla,Model S P90D (Refresh),Medium,435,0,12.0
+2016,Tesla,Model S P100D,Medium,507,0,12.0
+2016,Tesla ,Model X 60D,Large,322,0,10.0
+2016,Tesla,Model X 75D,Large,383,0,12.0
+2016,Tesla,Model X 90D,Large,414,0,12.0
+2016,Tesla,Model X P90D,Large,402,0,12.0
+2016,Tesla,Model X P100D,Large,465,0,12.0
+2017,BMW,i3 (60 Ah),Small,130,0,4.0
+2017,BMW,i3 (94 Ah),Small,183,0,5.0
+2017,Chevrolet,Bolt EV,Large,383,0,9.3
+2017,Ford,Focus Electric,Small,185,0,5.5
+2017,Hyundai,IONIQ Electric,Medium,200,0,4.0
+2017,Kia,Soul EV,Large,150,0,4.0
+2017,Mitsubishi,i-MiEV,Small,100,0,7.0
+2017,Nissan,LEAF,Medium,172,0,6.0
+2017,Tesla,Model S (60 kWh),Medium,338,0,10.0
+2017,Tesla,Model S (75 kWh),Medium,401,0,12.0
+2017,Tesla,Model S 60D,Medium,351,0,10.0
+2017,Tesla,Model S 75D,Medium,417,0,12.0
+2017,Tesla,Model S 90D,Medium,473,0,12.0
+2017,Tesla,Model S 100D,Medium,539,0,12.0
+2017,Tesla,Model S P90D,Medium,435,0,12.0
+2017,Tesla ,Model S P100D,Medium,507,0,12.0
+2017,Tesla ,Model X 60D,Large,322,0,10.0
+2017,Tesla ,Model X 75D,Large,383,0,12.0
+2017,Tesla ,Model X 90D,Large,414,0,12.0
+2017,Tesla ,Model X 100D,Large,475,0,12.0
+2017,Tesla ,Model X P90D,Large,402,0,12.0
+2017,Tesla ,Model X P100D,Large,465,0,12.0
+2017,Volkswagen,e-Golf,Small,201,0,5.3
+2018,BMW,i3,Small,183,0,5.0
+2018,BMW,i3s,Small,172,0,5.0
+2018,Chevrolet,Bolt EV,Large,383,0,9.3
+2018,Ford,Focus Electric,Small,185,0,5.5
+2018,Hyundai,IONIQ Electric,Medium,200,0,4.0
+2018,Kia,Soul EV,Large,179,0,5.0
+2018,Nissan,LEAF,Medium,242,0,8.0
+2018,smart,fortwo electric drive cabriolet,Large,92,0,3.0
+2018,smart,fortwo electric drive coupe,Large,93,0,3.0
+2018,Tesla,Model 3 Mid Range,Medium,418,0,10.0
+2018,Tesla,Model 3 Long Range,Medium,499,0,10.0
+2018,Tesla,Model 3 Long Range AWD,Medium,499,0,10.0
+2018,Tesla,Model 3 Long Range AWD Performance,Medium,499,0,10.0
+2018,Tesla,Model S (75 kWh),Medium,401,0,12.0
+2018,Tesla,Model S 75D,Medium,417,0,12.0
+2018,Tesla,Model S 100D,Medium,539,0,12.0
+2018,Tesla,Model S P100D,Medium,507,0,12.0
+2018,Tesla,Model X 75D,Large,383,0,12.0
+2018,Tesla,Model X 100D,Large,475,0,12.0
+2018,Tesla,Model X P100D,Large,465,0,12.0
+2018,Volkswagen,e-Golf,Small,201,0,5.3
+2019,Audi,e-tron 55 quattro,Large,329,0,10.0
+2019,BMW,i3 (120 Ah),Small,246,0,7.0
+2019,BMW,i3s (120 Ah),Small,246,0,7.0
+2019,Chevrolet,Bolt EV,Large,383,0,9.3
+2019,Hyundai,IONIQ Electric,Medium,200,0,4.0
+2019,Hyundai,Kona Electric,Large,415,0,9.0
+2019,Jaguar,I-PACE,Large,377,0,13.0
+2019,Kia,Niro EV,Large,385,0,9.5
+2019,Kia,Soul EV,Large,179,0,5.0
+2019,Nissan,LEAF (40 kWh),Medium,243,0,8.0
+2019,Nissan,LEAF S PLUS,Medium,363,0,11.0
+2019,Nissan,LEAF SV/SL PLUS,Medium,349,0,11.0
+2019,smart EQ,fortwo cabriolet,Large,92,0,3.0
+2019,smart EQ,fortwo coupe,Large,93,0,3.0
+2019,Tesla,Model 3 Standard Range,Medium,151,0,3.7
+2019,Tesla,Model 3 Standard Range Plus,Medium,386,0,8.5
+2019,Tesla,Model 3 Mid Range,Medium,425,0,10.0
+2019,Tesla,Model 3 Long Range,Medium,499,0,10.0
+2019,Tesla,Model 3 Long Range AWD,Medium,499,0,10.0
+2019,Tesla,Model 3 Long Range AWD Performance,Medium,499,0,10.0
+2019,Tesla,Model S 75D,Medium,417,0,12.0
+2019,Tesla,Model S 100D,Medium,539,0,12.0
+2019,Tesla,Model S P100D,Medium,507,0,12.0
+2019,Tesla,Model S Standard Range,Medium,459,0,9.0
+2019,Tesla,Model S Long Range,Medium,595,0,12.0
+2019,Tesla,"Model S Performance (19"" Wheels)",Medium,555,0,12.0
+2019,Tesla,"Model S Performance (21"" Wheels)",Medium,523,0,12.0
+2019,Tesla,Model X 75D,Large,383,0,12.0
+2019,Tesla,Model X 100D,Large,475,0,12.0
+2019,Tesla,Model X P100D,Large,465,0,12.0
+2019,Tesla,Model X Standard Range,Large,410,0,9.0
+2019,Tesla,Model X Long Range,Large,523,0,12.0
+2019,Tesla,"Model X Performance (20"" Wheels)",Large,491,0,12.0
+2019,Tesla,"Model X Performance (22"" Wheels)",Large,435,0,12.0
+2019,Volkswagen,e-Golf,Small,201,0,5.3
+2020,Audi,e-tron Sportback 55 quattro,Large,351,0,10.0
+2020,BMW,i3 (120 Ah),Small,246,0,7.0
+2020,BMW,i3s (120 Ah),Small,246,0,7.0
+2020,Chevrolet,Bolt EV,Large,417,0,10.0
+2020,Hyundai,IONIQ Electric,Medium,274,0,5.8
+2020,Hyundai,Kona Electric,Large,415,0,9.0
+2020,Jaguar,I-PACE,Large,377,0,13.0
+2020,Kia,Niro EV,Large,385,0,9.5
+2020,Kia,Soul EV (120 Ah),Large,248,0,6.0
+2020,Kia,Soul EV (180 Ah),Large,383,0,9.5
+2020,MINI,Cooper SE 3 Door,Small,177,0,4.0
+2020,Nissan,LEAF (40 kWh),Medium,240,0,8.0
+2020,Nissan,LEAF S PLUS,Medium,363,0,11.0
+2020,Nissan,LEAF SV/SL PLUS,Medium,349,0,11.0
+2020,Porsche,Taycan 4S (Performance Battery Plus),Small,327,0,10.5
+2020,Porsche,Taycan Turbo,Small,323,0,10.0
+2020,Porsche,Taycan Turbo S,Small,309,0,10.5
+2020,Tesla,Model 3 Standard Range,Medium,151,0,3.7
+2020,Tesla,Model 3 Standard Range Plus,Medium,402,0,8.5
+2020,Tesla,Model 3 Mid Range,Medium,425,0,10.0
+2020,Tesla,Model 3 Long Range,Medium,531,0,10.0
+2020,Tesla,Model 3 Long Range AWD,Medium,518,0,10.0
+2020,Tesla,"Model 3 Long Range AWD Performance (18"" Wheels)",Medium,518,0,10.0
+2020,Tesla,"Model 3 Long Range AWD Performance (19"" Wheels)",Medium,489,0,10.0
+2020,Tesla,"Model 3 Long Range AWD Performance (20"" Wheels)",Medium,481,0,10.0
+2020,Tesla,Model S Standard Range,Medium,462,0,9.0
+2020,Tesla,Model S Long Range,Medium,600,0,12.0
+2020,Tesla,Model S Long Range Plus (pre-15/6/20),Medium,629,0,12.0
+2020,Tesla,Model S Long Range Plus,Medium,647,0,12.0
+2020,Tesla,"Model S Performance (19"" Wheels)",Medium,560,0,12.0
+2020,Tesla,"Model S Performance (21"" Wheels)",Medium,525,0,12.0
+2020,Tesla,Model X Standard Range,Large,415,0,9.0
+2020,Tesla,Model X Long Range,Large,528,0,12.0
+2020,Tesla,Model X Long Range Plus,Large,565,0,12.0
+2020,Tesla,"Model X Performance (20"" Wheels)",Large,491,0,12.0
+2020,Tesla,"Model X Performance (22"" Wheels)",Large,438,0,12.0
+2020,Tesla,Model Y Long Range AWD,Large,509,0,10.0
+2020,Tesla,Model Y Performance,Large,507,0,10.0
+2020,Tesla,"Model Y Performance (21"" Wheels)",Large,468,0,10.0
+2020,Volkswagen,e-Golf,Small,198,0,5.3
+2021,Audi,e-tron 55 quattro,Large,357,0,10.0
+2021,Audi,e-tron Sportback 55 quattro,Large,351,0,10.0
+2021,BMW,i3 (120 Ah),Small,246,0,7.0
+2021,BMW,i3s (120 Ah),Small,246,0,7.0
+2021,Chevrolet,Bolt EV,Large,417,0,10.0
+2021,Ford,Mustang Mach-E Standard Range,Large,370,0,8.8
+2021,Ford,Mustang Mach-E Standard Range AWD,Large,340,0,8.5
+2021,Ford,"Mustang Mach-E Extended Range (19"" Wheels)",Large,483,0,10.9
+2021,Ford,Mustang Mach-E Extended Range AWD,Large,435,0,10.7
+2021,Ford,Mustang Mach-E California Route 1,Large,491,0,11.4
+2021,Ford,Mustang Mach-E GT Performance Edition,Large,418,0,10.1
+2021,Hyundai,IONIQ Electric,Medium,274,0,5.8
+2021,Hyundai,Kona Electric,Large,415,0,9.0
+2021,Kia,Niro EV,Large,385,0,9.5
+2021,Kia,Soul EV (120 Ah),Large,248,0,6.0
+2021,Kia,Soul EV (180 Ah),Large,383,0,9.5
+2021,MINI,Cooper SE 3 Door,Small,177,0,4.0
+2021,Nissan,LEAF (40 kWh),Medium,240,0,8.0
+2021,Nissan,LEAF S PLUS,Medium,363,0,11.0
+2021,Nissan,LEAF SV/SL PLUS,Medium,349,0,11.0
+2021,Polestar,2,Medium,375,0,8.0
+2021,Porsche,Taycan 4 Cross Turismo,Medium,346,0,10.5
+2021,Porsche,Taycan 4S (Performance Battery),Small,320,0,9.5
+2021,Porsche,Taycan 4S (Performance Battery Plus),Small,365,0,10.5
+2021,Porsche,Taycan 4S Cross Turismo,Medium,346,0,10.5
+2021,Porsche,Taycan Turbo,Small,341,0,10.5
+2021,Porsche,Taycan Turbo Cross Turismo,Medium,328,0,10.5
+2021,Porsche,Taycan Turbo S,Small,323,0,10.5
+2021,Porsche,Taycan Turbo S Cross Turismo,Medium,325,0,10.5
+2021,Tesla,Model 3 Standard Range,Medium,151,0,3.7
+2021,Tesla,Model 3 Standard Range Plus,Medium,423,0,8.5
+2021,Tesla,Model 3 Long Range AWD,Medium,568,0,10.0
+2021,Tesla,Model 3 Performance,Medium,507,0,10.0
+2021,Tesla,Model S Long Range,Medium,652,0,15.0
+2021,Tesla,Model S Long Range Plus,Medium,629,0,12.0
+2021,Tesla,"Model S Performance (19"" Wheels)",Medium,623,0,12.0
+2021,Tesla,"Model S Performance (21"" Wheels)",Medium,538,0,12.0
+2021,Tesla,"Model S Plaid (19"" Wheels)",Medium,637,0,15.0
+2021,Tesla,"Model S Plaid (21"" Wheels)",Medium,560,0,15.0
+2021,Tesla,Model X Long Range,Large,560,0,14.0
+2021,Tesla,Model X Long Range Plus,Large,597,0,12.0
+2021,Tesla,"Model X Performance (20"" Wheels)",Large,549,0,12.0
+2021,Tesla,"Model X Performance (22"" Wheels)",Large,483,0,12.0
+2021,Tesla,Model Y Standard Range,Large,393,0,8.0
+2021,Tesla,Model Y Long Range AWD,Large,525,0,10.0
+2021,Tesla,Model Y Performance,Large,488,0,10.0
+2021,Volkswagen,ID.4 Pro,Large,400,0,7.5
+2021,Volkswagen,ID.4 AWD Pro,Large,386,0,7.5
+2021,Volvo,XC40 Recharge,Large,335,0,8.0
+2022,Audi,e-tron 55 quattro,Large,357,0,10.0
+2022,Audi,e-tron Sportback 55 quattro,Large,351,0,10.0
+2022,Audi,"e-tron S Sportback quattro (20"" Wheels)",Large,341,0,10.0
+2022,Audi,"e-tron S Sportback quattro (21"" or 22"" Wheels)",Large,298,0,10.0
+2022,Audi,e-tron GT,Small,383,0,10.5
+2022,Audi,RS e-tron GT,Small,373,0,10.5
+2022,Audi,Q4 50 e-tron quattro,Large,388,0,9.0
+2022,Audi,Q4 50 e-tron Sportback quattro,Large,388,0,9.0
+2022,BMW,"i4 eDrive40 (18"" Wheels)",Small,484,0,10.0
+2022,BMW,"i4 eDrive40 (19"" Wheels)",Small,454,0,10.0
+2022,BMW,"i4 M50 xDrive (19"" Wheels)",Small,435,0,10.0
+2022,BMW,"i4 M50 xDrive (20"" Wheels)",Small,365,0,10.0
+2022,BMW,"iX xDrive50 (20"" Wheels)",Large,521,0,12.0
+2022,BMW,"iX xDrive50 (21"" Wheels)",Large,491,0,12.0
+2022,BMW,"iX xDrive50 (22"" Wheels)",Large,507,0,12.0
+2022,Chevrolet,Bolt EUV,Large,397,0,7.5
+2022,Chevrolet,Bolt EV,Large,417,0,7.5
+2022,Ford,F-150 Lightning Standard Range,Large,370,0,11.8
+2022,Ford,F-150 Lightning Extended Range,Large,515,0,10.1
+2022,Ford,F-150 Lightning Platinum,Large,483,0,9.3
+2022,Ford,Mustang Mach-E Standard Range,Large,397,0,8.1
+2022,Ford,Mustang Mach-E Standard Range AWD,Large,360,0,8.0
+2022,Ford,Mustang Mach-E Extended Range,Large,488,0,10.9
+2022,Ford,Mustang Mach-E Extended Range AWD,Large,446,0,10.7
+2022,Ford,Mustang Mach-E California Route 1,Large,505,0,11.4
+2022,Ford,Mustang Mach-E California Route 1 AWD,Large,502,0,10.1
+2022,Ford,Mustang Mach-E GT Performance Edition,Large,418,0,10.1
+2022,Hyundai,IONIQ 5 Standard Range,Medium,354,0,6.3
+2022,Hyundai,IONIQ 5 Long Range,Medium,488,0,8.5
+2022,Hyundai,IONIQ 5 Long Range AWD,Medium,414,0,8.5
+2022,Hyundai,Kona Electric,Large,415,0,9.5
+2022,Jaguar,I-PACE,Large,357,0,13.0
+2022,Kia,EV6 Standard Range,Large,373,0,6.3
+2022,Kia,EV6 Long Range,Large,499,0,8.7
+2022,Kia,EV6 Long Range AWD,Large,441,0,8.4
+2022,Kia,Niro EV,Large,385,0,9.5
+2022,Kia,Soul EV (120 Ah),Large,248,0,6.0
+2022,Kia,Soul EV (180 Ah),Large,383,0,9.5
+2022,Lucid,"Air Dream P AWD (19"" Wheels)",Medium,758,0,13.0
+2022,Lucid,"Air Dream P AWD (21"" Wheels)",Medium,726,0,13.0
+2022,Lucid,"Air Dream R AWD (19"" Wheels)",Medium,837,0,13.0
+2022,Lucid,"Air Dream R AWD (21"" Wheels)",Medium,774,0,13.0
+2022,Lucid,"Air Grand Touring AWD (19"" Wheels)",Medium,830,0,13.0
+2022,Lucid,"Air Grand Touring AWD (21"" Wheels)",Medium,755,0,13.0
+2022,Mazda,MX-30,Medium,161,0,5.3
+2022,Mercedes-Benz,EQB 350 4MATIC SUV,Large,365,0,7.5
+2022,Mercedes-Benz,EQS 580 4MATIC Sedan,Medium,547,0,11.25
+2022,MINI,Cooper SE 3 Door,Small,183,0,4.0
+2022,Nissan,LEAF (40 kWh),Medium,240,0,8.0
+2022,Nissan,LEAF S PLUS,Medium,363,0,11.0
+2022,Nissan,LEAF SV/SL PLUS,Medium,349,0,11.0
+2022,Polestar,2 Single Motor,Medium,435,0,8.0
+2022,Polestar,2 Dual Motor,Medium,401,0,8.0
+2022,Porsche,Taycan 4 Cross Turismo,Medium,346,0,10.5
+2022,Porsche,Taycan 4S (Performance Battery),Small,320,0,9.5
+2022,Porsche,Taycan 4S (Performance Battery Plus),Small,365,0,10.5
+2022,Porsche,Taycan 4S Cross Turismo,Medium,346,0,10.5
+2022,Porsche,Taycan GTS,Small,396,0,10.5
+2022,Porsche,Taycan GTS Sport Turismo,Small,375,0,10.5
+2022,Porsche,Taycan Turbo,Small,341,0,10.5
+2022,Porsche,Taycan Turbo Cross Turismo,Medium,328,0,10.5
+2022,Porsche,Taycan Turbo S,Small,323,0,10.5
+2022,Porsche,Taycan Turbo S Cross Turismo,Medium,325,0,10.5
+2022,Rivian,R1S,Large,509,0,13.0
+2022,Rivian,R1T,Large,505,0,13.0
+2022,Tesla,Model 3 Standard Range,Medium,146,0,3.7
+2022,Tesla,Model 3 RWD,Medium,438,0,8.5
+2022,Tesla,Model 3 Long Range AWD,Medium,576,0,10.0
+2022,Tesla,Model 3 Performance,Medium,507,0,10.0
+2022,Tesla,Model S,Medium,652,0,15.0
+2022,Tesla,"Model S Plaid (19"" Wheels)",Medium,637,0,15.0
+2022,Tesla,"Model S Plaid (21"" Wheels)",Medium,560,0,15.0
+2022,Tesla,Model X,Large,560,0,14.0
+2022,Tesla,"Model X Plaid (20"" Wheels)",Large,536,0,14.0
+2022,Tesla,"Model X Plaid (22"" Wheels)",Large,500,0,14.0
+2022,Tesla,Model Y AWD,Large,449,0,9.0
+2022,Tesla,Model Y Long Range AWD,Large,531,0,10.0
+2022,Tesla,Model Y Performance,Large,488,0,10.0
+2022,Volkswagen,ID.4 Pro,Large,422,0,7.5
+2022,Volkswagen,ID.4 AWD Pro,Large,394,0,7.5
+2022,Volvo,C40 Recharge Twin,Large,364,0,8.0
+2022,Volvo,XC40 Recharge Twin,Large,359,0,8.0
+2023,Audi,e-tron 55 quattro,Large,364,0,10.0
+2023,Audi,e-tron Sportback 55 quattro,Large,362,0,10.0
+2023,Audi,e-tron GT,Small,383,0,10.5
+2023,Audi,RS e-tron GT,Small,373,0,10.5
+2023,Audi,Q4 50 e-tron quattro,Large,380,0,9.0
+2023,Audi,Q4 Sportback 50 e-tron quattro,Large,389,0,9.0
+2023,BMW,"i4 eDrive35 Gran Coupe (18"" Wheels)",Small,412,0,8.0
+2023,BMW,"i4 eDrive35 Gran Coupe (19"" Wheels)",Small,378,0,8.0
+2023,BMW,"i4 eDrive40 Gran Coupe (18"" Wheels)",Small,484,0,10.0
+2023,BMW,"i4 eDrive40 Gran Coupe (19"" Wheels)",Small,454,0,10.0
+2023,BMW,"i4 M50 Gran Coupe (19"" Wheels)",Small,436,0,10.0
+2023,BMW,"i4 M50 Gran Coupe (20"" Wheels)",Small,365,0,10.0
+2023,BMW,"i7 xDrive60 (19"" Wheels)",Medium,512,0,12.0
+2023,BMW,"i7 xDrive60 (20"" Wheels)",Medium,476,0,12.0
+2023,BMW,"i7 xDrive60 (21"" Wheels)",Medium,496,0,12.0
+2023,BMW,"iX xDrive40 (20"" Wheels) ",Large,322,0,8.0
+2023,BMW,"iX xDrive40 (21"" Wheels) ",Large,322,0,8.0
+2023,BMW,"iX xDrive40 (22"" Wheels) ",Large,320,0,8.0
+2023,BMW,"iX xDrive50 (20"" Wheels)",Large,521,0,12.0
+2023,BMW,"iX xDrive50 (21"" Wheels)",Large,496,0,12.0
+2023,BMW,"iX xDrive50 (22"" Wheels)",Large,512,0,12.0
+2023,BMW,"iX M60 (21"" Wheels)",Large,463,0,12.0
+2023,BMW,"iX M60 (22"" Wheels)",Large,441,0,12.0
+2023,Cadillac,LYRIQ,Large,502,0,6.5
+2023,Cadillac,LYRIQ AWD,Large,494,0,10.7
+2023,Chevrolet,Bolt EUV,Large,397,0,7.5
+2023,Chevrolet,Bolt EV,Large,417,0,7.5
+2023,Fisker,Ocean Extreme/One,Large,579,0,18.0
+2023,Fisker,Ocean Ultra,Large,563,0,18.0
+2023,Ford,F-150 Lightning Standard Range,Large,386,0,11.9
+2023,Ford,F-150 Lightning Extended Range,Large,515,0,10.1
+2023,Ford,F-150 Lightning Platinum,Large,483,0,9.3
+2023,Ford,Mustang Mach-E Standard Range,Large,397,0,8.1
+2023,Ford,Mustang Mach-E Standard Range (LFP),Large,402,0,7.4
+2023,Ford,Mustang Mach-E Standard Range AWD,Large,360,0,8.0
+2023,Ford,Mustang Mach-E Standard Range AWD (LFP),Large,370,0,7.4
+2023,Ford,Mustang Mach-E Extended Range,Large,500,0,10.2
+2023,Ford,Mustang Mach-E Extended Range AWD,Large,467,0,10.0
+2023,Ford,Mustang Mach-E California Route 1 AWD,Large,502,0,10.1
+2023,Ford,Mustang Mach-E GT Performance Edition,Large,418,0,10.1
+2023,Genesis,Electrified G80,Medium,454,0,9.0
+2023,Genesis,GV60 Advanced AWD,Medium,399,0,7.2
+2023,Genesis,GV60 Performance AWD,Medium,378,0,7.2
+2023,Genesis,Electrified GV70,Large,383,0,7.9
+2023,Hyundai,IONIQ 5 Standard Range,Medium,354,0,6.3
+2023,Hyundai,IONIQ 5 Long Range,Medium,488,0,8.5
+2023,Hyundai,IONIQ 5 Long Range AWD,Medium,422,0,8.5
+2023,Hyundai,IONIQ 6 Standard Range,Medium,386,0,6.1
+2023,Hyundai,IONIQ 6 Long Range (18'' Wheels),Medium,581,0,7.5
+2023,Hyundai,IONIQ 6 Long Range AWD (18'' Wheels),Medium,509,0,7.5
+2023,Hyundai,IONIQ 6 Long Range AWD (20'' Wheels),Medium,435,0,7.5
+2023,Hyundai,Kona Electric,Large,415,0,9.5
+2023,Jaguar,I-PACE,Large,381,0,13.0
+2023,Kia,EV6 Standard Range,Large,373,0,6.3
+2023,Kia,EV6 Long Range,Large,499,0,8.7
+2023,Kia,"EV6 Long Range AWD (19"" Wheels)",Large,454,0,8.4
+2023,Kia,"EV6 Long Range AWD (20"" Wheels)",Large,406,0,8.4
+2023,Kia,EV6 GT AWD,Large,332,0,8.9
+2023,Kia,Niro EV,Large,407,0,7.5
+2023,Kia,Soul EV (120 Ah),Large,248,0,6.0
+2023,Kia,Soul EV (180 Ah),Large,383,0,9.5
+2023,Lexus,"RZ 450e AWD (18"" Wheels)",Large,354,0,10.0
+2023,Lexus,"RZ 450e AWD (20"" Wheels)",Large,315,0,10.0
+2023,Lucid,"Air Grand Touring XR (19"" Wheels)",Medium,830,0,13.0
+2023,Lucid,"Air Grand Touring XR (20"" Wheels)",Medium,755,0,13.0
+2023,Lucid,"Air Grand Touring XR (21"" Wheels)",Medium,755,0,13.0
+2023,Lucid,"Air Grand Touring Performance (21"" Wheels)",Medium,718,0,13.0
+2023,Lucid,"Air Pure (19"" Wheels)",Medium,660,0,10.0
+2023,Lucid,"Air Pure (20"" Wheels)",Medium,618,0,10.0
+2023,Lucid,"Air Touring (19"" Wheels)",Medium,684,0,10.0
+2023,Lucid,"Air Touring (20"" Wheels)",Medium,618,0,10.0
+2023,Lucid,"Air Touring (21"" Wheels)",Medium,618,0,10.0
+2023,Mazda,MX-30,Medium,161,0,5.3
+2023,Mercedes-Benz,AMG EQE 4MATIC+ Sedan,Medium,362,0,9.5
+2023,Mercedes-Benz,AMG EQS 4MATIC+ Sedan,Medium,446,0,11.25
+2023,Mercedes-Benz,EQB 250+,Large,394,0,7.75
+2023,Mercedes-Benz,EQB 350 4MATIC SUV,Large,356,0,6.25
+2023,Mercedes-Benz,EQE 350 4MATIC Sedan,Medium,418,0,8.25
+2023,Mercedes-Benz,EQE 350 4MATIC SUV,Large,407,0,9.5
+2023,Mercedes-Benz,EQE 500 4MATIC Sedan,Medium,418,0,9.5
+2023,Mercedes-Benz,EQE 500 4MATIC SUV,Large,433,0,9.5
+2023,Mercedes-Benz,EQS 450 4MATIC Sedan,Medium,547,0,11.5
+2023,Mercedes-Benz,EQS 450 4MATIC SUV,Large,459,0,11.5
+2023,Mercedes-Benz,EQS 580 4MATIC Sedan,Medium,547,0,11.25
+2023,Mercedes-Benz,EQS 580 4MATIC SUV,Large,459,0,11.5
+2023,MINI,Cooper SE 3 Door,Small,183,0,4.0
+2023,Polestar,2 Single Motor,Medium,435,0,8.0
+2023,Polestar,2 Dual Motor,Medium,418,0,8.0
+2023,Polestar,2 Dual Motor Performance Pack,Medium,418,0,8.0
+2023,Polestar,2 BST Edition,Medium,397,0,8.0
+2023,Porsche,Taycan 4S (Performance Battery),Small,332,0,9.5
+2023,Porsche,Taycan 4S (Performance Battery Plus),Small,378,0,10.5
+2023,Porsche,Taycan 4S Cross Turismo,Medium,370,0,10.5
+2023,Porsche,Taycan GTS,Small,396,0,10.5
+2023,Porsche,Taycan GTS Sport Turismo,Small,322,0,10.5
+2023,Porsche,Taycan Turbo,Small,383,0,10.5
+2023,Porsche,Taycan Turbo Cross Turismo,Medium,375,0,10.5
+2023,Porsche,Taycan Turbo S,Small,357,0,10.5
+2023,Porsche,Taycan Turbo S Cross Turismo,Medium,357,0,10.5
+2023,Rivian,"R1S (20"" Wheels)",Large,465,0,13.0
+2023,Rivian,"R1S (20"" Wheels) All-Terrain",Large,441,0,13.0
+2023,Rivian,"R1S (20"" Wheels) AT Dual Large",Large,494,0,13.0
+2023,Rivian,"R1S (20"" Wheels) AT Performance Dual Large",Large,494,0,13.0
+2023,Rivian,"R1S (20"" Wheels) AT Dual Max",Large,571,0,13.0
+2023,Rivian,"R1S (20"" Wheels) AT Performance Dual Max",Large,571,0,13.0
+2023,Rivian,"R1S (21"" Wheels)",Large,517,0,13.0
+2023,Rivian,"R1S (21"" Wheels) Dual Large",Large,566,0,13.0
+2023,Rivian,"R1S (21"" Wheels) Performance Dual Large",Large,566,0,13.0
+2023,Rivian,"R1S (21"" Wheels) Dual Max",Large,644,0,13.0
+2023,Rivian,"R1S (21"" Wheels) Performance Dual Max",Large,644,0,13.0
+2023,Rivian,"R1S (22"" Wheels)",Large,488,0,13.0
+2023,Rivian,"R1S (22"" Wheels) Dual Large",Large,549,0,13.0
+2023,Rivian,"R1S (22"" Wheels) Performance Dual Large",Large,549,0,13.0
+2023,Rivian,"R1S (22"" Wheels) Dual Max",Large,612,0,13.0
+2023,Rivian,"R1S (22"" Wheels) Performance Dual Max",Large,612,0,13.0
+2023,Rivian,"R1T (20"" Wheels)",Large,465,0,13.0
+2023,Rivian,"R1T (20"" Wheels) All-Terrain",Large,441,0,13.0
+2023,Rivian,"R1T (20"" Wheels) AT Dual Large",Large,494,0,13.0
+2023,Rivian,"R1T (20"" Wheels) AT Performance Dual Large",Large,494,0,13.0
+2023,Rivian,"R1T (20"" Wheels) AT Dual Max",Large,571,0,13.0
+2023,Rivian,"R1T (20"" Wheels) AT Performance Dual Max",Large,571,0,13.0
+2023,Rivian,"R1T (21"" Wheels)",Large,528,0,13.0
+2023,Rivian,"R1T (21"" Wheels) Dual Large",Large,566,0,13.0
+2023,Rivian,"R1T (21"" Wheels) Performance Dual Large",Large,566,0,13.0
+2023,Rivian,"R1T (21"" Wheels) Dual Max",Large,661,0,13.0
+2023,Rivian,"R1T (21"" Wheels) Performance Dual Max",Large,661,0,13.0
+2023,Rivian,"R1T (22"" Wheels)",Large,488,0,13.0
+2023,Rivian,"R1T (22"" Wheels) Dual Large",Large,549,0,13.0
+2023,Rivian,"R1T (22"" Wheels) Performance Dual Large",Large,549,0,13.0
+2023,Rivian,"R1T (22"" Wheels) Dual Max",Large,612,0,13.0
+2023,Rivian,"R1T (22"" Wheels) Performance Dual Max",Large,612,0,13.0
+2023,Subaru,Solterra AWD,Large,360,0,11.0
+2023,Tesla,Model 3 RWD,Medium,438,0,8.5
+2023,Tesla,Model 3 Long Range AWD (pre-1/10/23),Medium,576,0,10.0
+2023,Tesla,Model 3 Long Range AWD,Medium,536,0,10.0
+2023,Tesla,Model 3 Long Range AWD (Import),Medium,534,0,10.0
+2023,Tesla,Model 3 Performance,Medium,507,0,10.0
+2023,Tesla,Model S,Medium,652,0,15.0
+2023,Tesla,"Model S Plaid (19"" Wheels)",Medium,637,0,15.0
+2023,Tesla,"Model S Plaid (21"" Wheels)",Medium,560,0,15.0
+2023,Tesla,Model X,Large,560,0,14.0
+2023,Tesla,"Model X Plaid (20"" Wheels)",Large,536,0,14.0
+2023,Tesla,"Model X Plaid (22"" Wheels)",Large,500,0,14.0
+2023,Tesla,Model Y RWD,Large,394,0,8.0
+2023,Tesla,Model Y AWD,Large,449,0,9.0
+2023,Tesla,Model Y Long Range AWD,Large,531,0,10.0
+2023,Tesla,Model Y Long Range AWD (Import),Large,497,0,10.0
+2023,Tesla,Model Y Performance,Large,488,0,10.0
+2023,Tesla,Model Y Performance (Import),Large,459,0,10.0
+2023,Toyota,bZ4X,Large,406,0,11.0
+2023,Toyota,bZ4X AWD,Large,367,0,11.0
+2023,VinFast,VF8 ECO,Large,425,0,12.0
+2023,VinFast,VF8 PLUS,Large,354,0,12.0
+2023,VinFast,VF8 PLUS Performance,Large,391,0,12.0
+2023,Volkswagen,ID.4,Large,336,0,6.0
+2023,Volkswagen,ID.4 Pro,Large,443,0,7.5
+2023,Volkswagen,ID.4 AWD Pro,Large,410,0,7.5
+2023,Volvo,C40 Recharge Twin,Large,364,0,8.0
+2023,Volvo,XC40 Recharge Twin,Large,359,0,8.0
+2024,Acura,ZDX A-SPEC AWD,Large,489,0,11.0
+2024,Acura,ZDX Type S AWD,Large,447,0,11.0
+2024,Audi,e-tron GT,Small,399,0,10.5
+2024,Audi,RS e-tron GT,Small,399,0,10.5
+2024,Audi,Q4 45 e-tron,Large,463,0,12.0
+2024,Audi,Q4 50 e-tron,Large,380,0,9.0
+2024,Audi,Q4 Sportback 50 e-tron,Large,389,0,9.0
+2024,Audi,Q4 55 e-tron,Large,415,0,12.0
+2024,Audi,Q4 Sportback 55 e-tron,Large,415,0,12.0
+2024,Audi,Q8 e-tron,Large,459,0,16.0
+2024,Audi,Q8 Sportback e-tron,Large,476,0,16.0
+2024,Audi,"SQ8 e-tron (20"" Wheels)",Large,409,0,16.0
+2024,Audi,"SQ8 e-tron (21"" or 22"" Wheels)",Large,351,0,16.0
+2024,Audi,"SQ8 Sportback e-tron (20"" Wheels)",Large,409,0,16.0
+2024,Audi,"SQ8 Sportback e-tron (21"" or 22"" Wheels)",Large,351,0,16.0
+2024,BMW,"i4 eDrive35 Gran Coupe (18"" Wheels)",Small,444,0,7.0
+2024,BMW,"i4 eDrive35 Gran Coupe (19"" Wheels)",Small,406,0,7.0
+2024,BMW,"i4 eDrive40 Gran Coupe (18"" Wheels)",Small,484,0,8.0
+2024,BMW,"i4 eDrive40 Gran Coupe (19"" Wheels)",Small,455,0,8.0
+2024,BMW,"i4 xDrive40 Gran Coupe (18"" Wheels)",Small,494,0,8.0
+2024,BMW,"i4 xDrive40 Gran Coupe (19"" Wheels)",Small,449,0,8.0
+2024,BMW,"i4 M50 Gran Coupe (19"" Wheels)",Small,433,0,8.0
+2024,BMW,"i4 M50 Gran Coupe (20"" Wheels)",Small,365,0,8.0
+2024,BMW,"i5 M60 Sedan (19"" Wheels)",Small,412,0,8.0
+2024,BMW,"i5 M60 Sedan (20"" Wheels)",Small,399,0,8.0
+2024,BMW,"i5 M60 Sedan (21"" Wheels)",Small,386,0,8.0
+2024,BMW,"i7 xDrive60 Sedan (19"" Wheels)",Medium,510,0,11.0
+2024,BMW,"i7 xDrive60 Sedan (20"" Wheels)",Medium,480,0,11.0
+2024,BMW,"i7 xDrive60 Sedan (21"" Wheels)",Medium,494,0,11.0
+2024,BMW,"i7 M70 xDrive Sedan (20"" Wheels)",Medium,441,0,11.0
+2024,BMW,"i7 M70 xDrive Sedan (21"" Wheels)",Medium,468,0,11.0
+2024,BMW,"iX xDrive40 (20"" Wheels) ",Large,351,0,8.0
+2024,BMW,"iX xDrive40 (21"" Wheels) ",Large,346,0,8.0
+2024,BMW,"iX xDrive40 (22"" Wheels) ",Large,356,0,8.0
+2024,BMW,"iX xDrive50 (20"" Wheels) ",Large,500,0,11.0
+2024,BMW,"iX xDrive50 (21"" Wheels)",Large,494,0,11.0
+2024,BMW,"iX xDrive50 (22"" Wheels) ",Large,491,0,11.0
+2024,BMW,"iX M60 (21"" Wheels)",Large,476,0,11.0
+2024,BMW,"iX M60 (22"" Wheels)",Large,476,0,11.0
+2024,Cadillac,LYRIQ (11.5 kW Charger),Large,505,0,10.7
+2024,Cadillac,LYRIQ (19 kW Charger),Large,505,0,6.7
+2024,Cadillac,LYRIQ AWD (11.5 kW Charger),Large,494,0,10.7
+2024,Cadillac,LYRIQ AWD (19 kW Charger),Large,494,0,6.7
+2024,Chevrolet,Blazer EV RS,Large,521,0,11.0
+2024,Chevrolet,Blazer EV 2LT/RS AWD,Large,449,0,9.5
+2024,Chevrolet,Equinox EV,Large,513,0,9.4
+2024,Chevrolet,Equinox EV AWD,Large,459,0,9.5
+2024,Chevrolet,Silverado EV 3WT,Large,632,0,11.0
+2024,Chevrolet,Silverado EV 4WT,Large,724,0,12.7
+2024,FIAT,500e,Large,227,0,6.2
+2024,Fisker,"Ocean Extreme (20"" Wheels)",Large,579,0,18.0
+2024,Fisker,"Ocean Extreme (22"" Wheels)",Large,541,0,18.0
+2024,Fisker,"Ocean Sport (20"" Wheels)",Large,372,0,12.0
+2024,Fisker,"Ocean Sport (22"" Wheels)",Large,312,0,12.0
+2024,Fisker,"Ocean Ultra (20"" Wheels)",Large,563,0,18.0
+2024,Fisker,"Ocean Ultra (22"" Wheels)",Large,525,0,18.0
+2024,Ford,F-150 Lightning Standard Range,Large,386,0,11.9
+2024,Ford,F-150 Lightning Extended Range,Large,515,0,14.6
+2024,Ford,F-150 Lightning Platinum,Large,483,0,14.6
+2024,Ford,F-150 Lightning Pro,Large,515,0,10.1
+2024,Ford,Mustang Mach-E Standard Range,Large,402,0,7.1
+2024,Ford,Mustang Mach-E Standard Range AWD,Large,370,0,7.5
+2024,Ford,Mustang Mach-E Extended Range,Large,515,0,10.1
+2024,Ford,Mustang Mach-E Extended Range AWD,Large,483,0,10.0
+2024,Ford,Mustang Mach-E GT,Large,451,0,9.9
+2024,Ford,Mustang Mach-E Rally,Large,426,0,10.2
+2024,Genesis,Electrified G80,Medium,454,0,9.0
+2024,Genesis,GV60 Advanced AWD,Large,399,0,7.2
+2024,Genesis,GV60 Performance AWD,Large,378,0,7.2
+2024,Genesis,Electrified GV70,Large,380,0,7.9
+2024,GMC,HUMMER EV2X Pickup,Large,500,0,10.5
+2024,GMC,HUMMER EV2X Pickup Mud Terrain Tire,Large,449,0,10.5
+2024,GMC,HUMMER EV2X SUV,Large,488,0,10.5
+2024,GMC,HUMMER EV2X SUV Mud Terrain Tire,Large,449,0,10.5
+2024,GMC,HUMMER EV3X SUV,Large,505,0,10.5
+2024,GMC,HUMMER EV3X SUV Mud Terrain Tire,Large,480,0,10.5
+2024,Honda,Prologue EX AWD,Large,452,0,9.5
+2024,Honda,Prologue EX-L AWD,Large,452,0,9.5
+2024,Honda,Prologue Touring AWD,Large,439,0,9.5
+2024,Hyundai,IONIQ 5 Long Range,Large,488,0,8.5
+2024,Hyundai,IONIQ 5 Long Range AWD,Large,410,0,8.5
+2024,Hyundai,IONIQ 6 Long Range (18'' Wheels),Medium,581,0,7.5
+2024,Hyundai,IONIQ 6 Long Range (20'' Wheels),Medium,491,0,7.5
+2024,Hyundai,IONIQ 6 Long Range AWD (18'' Wheels),Medium,509,0,7.5
+2024,Hyundai,IONIQ 6 Long Range AWD (20'' Wheels),Medium,435,0,7.5
+2024,Hyundai,Kona Electric Long Range,Large,420,0,6.1
+2024,Jaguar,I-PACE,Large,381,0,13.0
+2024,Kia,EV6 Wind,Large,499,0,8.7
+2024,Kia,"EV6 Land AWD (19"" Wheels)",Large,454,0,8.4
+2024,Kia,"EV6 Land AWD (20"" Wheels)",Large,406,0,8.4
+2024,Kia,EV6 GT AWD,Large,351,0,7.7
+2024,Kia,EV9 Light,Large,370,0,11.4
+2024,Kia,EV9 Wind,Large,489,0,15.2
+2024,Kia,EV9 Land AWD,Large,451,0,14.5
+2024,Kia,EV9 Land AWD GT-Line,Large,435,0,15.2
+2024,Kia,Niro EV,Large,407,0,7.5
+2024,Lexus,"RZ 450e AWD (18"" Wheels)",Large,354,0,10.0
+2024,Lexus,"RZ 450e AWD (20"" Wheels)",Large,315,0,10.0
+2024,Lucid,"Air Grand Touring XR AWD (19"" Wheels)",Medium,832,0,13.0
+2024,Lucid,"Air Grand Touring XR AWD (20"" Wheels)",Medium,782,0,13.0
+2024,Lucid,"Air Grand Touring XR AWD (21"" Wheels)",Medium,726,0,13.0
+2024,Lucid,"Air Pure (19"" Wheels)",Medium,674,0,10.0
+2024,Lucid,"Air Pure (20"" Wheels)",Medium,634,0,10.0
+2024,Lucid,Air Sapphire AWD,Medium,687,0,13.0
+2024,Lucid,"Air Touring AWD (19"" Wheels)",Medium,661,0,10.0
+2024,Lucid,"Air Touring AWD (20"" Wheels)",Medium,615,0,10.0
+2024,Lucid,"Air Touring AWD (21"" Wheels)",Medium,587,0,10.0
+2024,Mazda,MX-30,Medium,161,0,5.3
+2024,Mercedes-Benz,AMG EQE 4MATIC+ Sedan,Medium,370,0,10.5
+2024,Mercedes-Benz,AMG EQE 4MATIC+ SUV,Large,378,0,9.5
+2024,Mercedes-Benz,AMG EQS 4MATIC+ Sedan,Medium,483,0,11.25
+2024,Mercedes-Benz,EQB 250+,Large,359,0,7.25
+2024,Mercedes-Benz,EQB 300 4MATIC,Large,330,0,6.75
+2024,Mercedes-Benz,EQE 350 4MATIC Sedan,Medium,451,0,9.5
+2024,Mercedes-Benz,EQE 350 4MATIC SUV,Large,426,0,9.5
+2024,Mercedes-Benz,EQE 500 4MATIC Sedan,Medium,446,0,9.5
+2024,Mercedes-Benz,EQE 500 4MATIC SUV,Large,462,0,9.5
+2024,Mercedes-Benz,EQS 450 4MATIC Sedan,Medium,555,0,12.75
+2024,Mercedes-Benz,EQS 450 4MATIC SUV,Large,531,0,14.0
+2024,Mercedes-Benz,EQS 580 4MATIC Sedan,Medium,555,0,12.75
+2024,Mercedes-Benz,EQS 580 4MATIC SUV,Large,531,0,14.0
+2024,Mercedes-Benz,Maybach EQS 680 4MATIC SUV,Large,517,0,14.0
+2024,MINI,Cooper SE 3 Door,Small,183,0,4.0
+2024,Nissan,ARIYA Engage,Large,348,0,10.0
+2024,Nissan,ARIYA Evolve+,Large,465,0,14.0
+2024,Nissan,ARIYA Evolve e-4ORCE,Large,330,0,10.0
+2024,Nissan,ARIYA Evolve+ e-4ORCE,Large,438,0,13.0
+2024,Nissan,ARIYA Platinum+ e-4ORCE,Large,428,0,14.0
+2024,Nissan,LEAF SV,Medium,240,0,8.0
+2024,Nissan,LEAF SV PLUS,Medium,341,0,11.0
+2024,Polestar,"2 Single Motor (19"" Wheels)",Medium,515,0,8.0
+2024,Polestar,"2 Single Motor (20"" Wheels)",Medium,494,0,8.0
+2024,Polestar,"2 Dual Motor (19"" Wheels)",Medium,444,0,8.0
+2024,Polestar,"2 Dual Motor (20"" Wheels)",Medium,428,0,8.0
+2024,Polestar,2 Dual Motor Performance Pack,Medium,397,0,8.0
+2024,Porsche,Taycan 4S (Performance Battery),Small,332,0,9.5
+2024,Porsche,Taycan 4S (Performance Battery Plus),Small,378,0,10.5
+2024,Porsche,Taycan 4S Cross Turismo,Medium,370,0,10.5
+2024,Porsche,Taycan GTS,Small,396,0,10.5
+2024,Porsche,Taycan GTS Sport Turismo,Small,322,0,10.5
+2024,Porsche,Taycan Turbo,Small,383,0,10.5
+2024,Porsche,Taycan Turbo Cross Turismo,Medium,375,0,10.5
+2024,Porsche,Taycan Turbo S,Medium,357,0,10.5
+2024,Porsche,Taycan Turbo S Cross Turismo,Medium,357,0,10.5
+2024,Rivian,"R1S All-Terrain Dual Large (20"" Wheels)",Large,494,0,13.0
+2024,Rivian,"R1S AT Performance Dual Large (20"" Wheels)",Large,494,0,13.0
+2024,Rivian,"R1S Dual Large (21"" Wheels)",Large,566,0,13.0
+2024,Rivian,"R1S Performance Dual Large (21"" Wheels)",Large,566,0,13.0
+2024,Rivian,"R1S Dual Large (22"" Wheels)",Large,549,0,13.0
+2024,Rivian,"R1S Performance Dual Large (22"" Wheels)",Large,549,0,13.0
+2024,Rivian,"R1S All-Terrain Dual Max (20"" Wheels)",Large,571,0,14.5
+2024,Rivian,"R1S All-Terrain Performance Dual Max (20"" Wheels)",Large,571,0,14.5
+2024,Rivian,"R1S Dual Max (21"" Wheels)",Large,644,0,14.5
+2024,Rivian,"R1S Performance Dual Max (21"" Wheels)",Large,644,0,14.5
+2024,Rivian,"R1S Dual Max (22"" Wheels)",Large,612,0,14.5
+2024,Rivian,"R1S Performance Dual Max (22"" Wheels)",Large,612,0,14.5
+2024,Rivian,"R1S Quad Large (20"" Wheels)",Large,465,0,13.0
+2024,Rivian,"R1S All-Terrain Quad Large (20"" Wheels)",Large,441,0,13.0
+2024,Rivian,"R1S Quad Large (21"" Wheels)",Large,517,0,13.0
+2024,Rivian,"R1S Quad Large (22"" Wheels)",Large,488,0,13.0
+2024,Rivian,"R1T All-Terrain Dual Large (20"" Wheels)",Large,494,0,13.0
+2024,Rivian,"R1T AT Performance Dual Large (20"" Wheels)",Large,494,0,13.0
+2024,Rivian,"R1T Dual Large (21"" Wheels)",Large,566,0,13.0
+2024,Rivian,"R1T Performance Dual Large (21"" Wheels)",Large,566,0,13.0
+2024,Rivian,"R1T Dual Large (22"" Wheels)",Large,549,0,13.0
+2024,Rivian,"R1T Performance Dual Large (22"" Wheels)",Large,549,0,13.0
+2024,Rivian,"R1T All-Terrain Dual Max (20"" Wheels)",Large,571,0,14.5
+2024,Rivian,"R1T All-Terrain Performance Dual Max (20"" Wheels)",Large,571,0,14.5
+2024,Rivian,"R1T Dual Max (21"" Wheels)",Large,661,0,14.5
+2024,Rivian,"R1T Performance Dual Max (21"" Wheels)",Large,661,0,14.5
+2024,Rivian,"R1T Dual Max (22"" Wheels)",Large,612,0,14.5
+2024,Rivian,"R1T Performance Dual Max (22"" Wheels)",Large,612,0,14.5
+2024,Rivian,"R1T Quad Large (20"" Wheels)",Large,465,0,13.0
+2024,Rivian,"R1T All-Terrain Quad Large (20"" Wheels)",Large,441,0,13.0
+2024,Rivian,"R1T Quad Large (21"" Wheels)",Large,528,0,13.0
+2024,Rivian,"R1T Quad Large (22"" Wheels)",Large,488,0,13.0
+2024,Rolls-Royce,"Spectre (22"" Wheels)",Small,468,0,11.0
+2024,Rolls-Royce,"Spectre (23"" Wheels)",Small,428,0,11.0
+2024,Rolls-Royce,"Black Badge Spectre (22"" Wheels)",Small,451,0,11.0
+2024,Rolls-Royce,"Black Badge Spectre (23"" Wheels)",Small,425,0,11.0
+2024,Subaru,Solterra AWD,Large,359,0,11.0
+2024,Tesla,Model 3 RWD,Medium,438,0,8.5
+2024,Tesla,Model 3 RWD (Import),Medium,438,0,8.5
+2024,Tesla,Model 3 Long Range AWD,Medium,549,0,10.0
+2024,Tesla,Model 3 Long Range AWD (Import),Medium,549,0,10.0
+2024,Tesla,Model 3 Performance,Medium,478,0,10.0
+2024,Tesla,Model S,Medium,647,0,15.0
+2024,Tesla,"Model S Plaid (19"" Wheels)",Medium,578,0,15.0
+2024,Tesla,"Model S Plaid (21"" Wheels)",Medium,515,0,15.0
+2024,Tesla,Model X,Large,539,0,14.0
+2024,Tesla,"Model X Plaid (20"" Wheels)",Large,525,0,14.0
+2024,Tesla,"Model X Plaid (22"" Wheels)",Large,483,0,14.0
+2024,Tesla,Model Y RWD,Large,394,0,8.0
+2024,Tesla,Model Y RWD (Import),Large,386,0,8.0
+2024,Tesla,Model Y Long Range AWD,Large,497,0,10.0
+2024,Tesla,Model Y Long Range AWD (Import),Large,496,0,10.0
+2024,Tesla,Model Y Performance,Large,459,0,10.0
+2024,Tesla,Model Y Performance (Import),Large,449,0,10.0
+2024,Toyota,bZ4X,Large,406,0,11.0
+2024,Toyota,bZ4X AWD,Large,367,0,11.0
+2024,VinFast,VF8 ECO,Large,425,0,12.0
+2024,VinFast,VF8 PLUS,Large,356,0,12.0
+2024,VinFast,VF8 PLUS Performance,Large,391,0,12.0
+2024,VinFast,VF9 ECO,Large,531,0,15.0
+2024,VinFast,VF9 PLUS,Large,468,0,15.0
+2024,Volkswagen,ID.4,Large,332,0,6.0
+2024,Volkswagen,ID.4 S,Large,332,0,6.0
+2024,Volkswagen,ID.4 Pro,Large,468,0,8.0
+2024,Volkswagen,ID.4 Pro S,Large,468,0,8.0
+2024,Volkswagen,ID.4 AWD Pro,Large,423,0,8.0
+2024,Volkswagen,ID.4 AWD Pro S,Large,423,0,8.0
+2024,Volvo,C40 Recharge,Large,478,0,8.0
+2024,Volvo,C40 Recharge Twin,Large,414,0,8.0
+2024,Volvo,XC40 Recharge,Large,472,0,8.0
+2024,Volvo,XC40 Recharge Twin,Large,409,0,8.0
