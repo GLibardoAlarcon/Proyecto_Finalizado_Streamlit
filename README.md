@@ -53,7 +53,7 @@ MySQL es una opción sólida para almacenar datos estructurados, y phpMyAdmin of
   - **Jupyter Notebook**: Para desarrollar, entrenar y documentar modelos de manera interactiva.
 
 ### **Justificación:**
-Scikit-learn es perfecto para comenzar con machine learning gracias a su simplicidad y eficacia. TensorFlow o PyTorch se consideran si se requiere mayor flexibilidad o modelos más complejos. Jupyter Notebook facilita la experimentación y documentación del proceso de entrenamiento.
+Scikit-learn es perfecto para comenzar con machine learning gracias a su simplicidad y eficacia. Jupyter Notebook facilita la experimentación y documentación del proceso de entrenamiento.
 
 ---
 
@@ -71,7 +71,6 @@ Scikit-learn es perfecto para comenzar con machine learning gracias a su simplic
 
 - **Desarrollo de Dashboards Interactivos:**
   - **Streamlit** o **Dash**: Frameworks de Python para crear aplicaciones web interactivas y dashboards de manera rápida y sencilla.
-  - **Tableau o Power BI** (opcional): Herramientas comerciales avanzadas para dashboards más complejos y funcionalidades adicionales.
 
 ### **Justificación:**
 Matplotlib y Seaborn ofrecen una base sólida para la visualización de datos, mientras que herramientas como Streamlit permiten transformar estos gráficos en dashboards interactivos. Jupyter Notebook combina análisis y visualización en un solo entorno, facilitando la creación de informes comprensibles y detallados.
