@@ -14,7 +14,7 @@
   - **PyArrow**: Para leer y escribir archivos Parquet de manera eficiente.
 
 - **Gestión de Entornos:**
-  - **Anaconda**: Facilita la gestión de paquetes y entornos virtuales, asegurando que todas las dependencias estén correctamente instaladas.
+  - **visual estudio code**: Facilita la gestión de paquetes y entornos virtuales, asegurando que todas las dependencias estén correctamente instaladas.
 
 ### **Justificación:**
 Python, junto con Pandas y PyArrow, proporciona una solución robusta y flexible para la ingesta y transformación de datos, permitiendo manejar diferentes formatos de archivo de manera eficiente.
