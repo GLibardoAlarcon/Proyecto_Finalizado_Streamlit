@@ -45,7 +45,6 @@ MySQL es una opción sólida para almacenar datos estructurados, y phpMyAdmin of
 
 - **Bibliotecas de Machine Learning:**
   - **Scikit-learn**: Ideal para modelos de machine learning básicos y medianamente complejos, como regresión y clasificación.
-  - **TensorFlow o PyTorch** (opcional): Para modelos más avanzados o redes neuronales si se requiere mayor complejidad.
 
 - **Serialización de Modelos:**
   - **Pickle**: Para guardar y cargar modelos entrenados de manera sencilla.
