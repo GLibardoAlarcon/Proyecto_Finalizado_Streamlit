@@ -93,8 +93,11 @@ Matplotlib y Seaborn ofrecen una base sólida para la visualización de datos, m
   - **Autenticación y Autorización**: Gestionar permisos de usuarios para controlar el acceso a diferentes partes de la base de datos.
   - **Uso de SSH o VPN**: Para cifrar las conexiones y proteger los datos en tránsito.
 
+- **Orquestador:**
+  - **Apache Airflow**: Para gestionar y orquestar los flujos de trabajo de ETL y entrenamiento de modelos.
+
 ### **Justificación:**
-Garantizar la seguridad es crucial cuando se permite el acceso remoto a la base de datos. Configurar MySQL correctamente y utilizar métodos de cifrado como SSH o VPN protege los datos y asegura que solo usuarios autorizados puedan acceder al sistema.
+Garantizar la seguridad es crucial cuando se permite el acceso remoto a la base de datos. Configurar MySQL correctamente y utilizar métodos de cifrado como SSH o VPN protege los datos y asegura que solo usuarios autorizados puedan acceder al sistema. Apache Airflow facilita la automatización y programación de tareas complejas en el flujo de trabajo.
 
 ---
 
@@ -102,19 +105,19 @@ Garantizar la seguridad es crucial cuando se permite el acceso remoto a la base 
 
 | **Fase**                                  | **Herramientas y Tecnologías**                                                                                           |
 |-------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| **1. Ingesta de Datos y ETL**             | Python, Pandas PyArrow                                                                                                 |
+| **1. Ingesta de Datos y ETL**             | Python, Pandas, PyArrow, MinIO                                                                                           |
 | **2. Ingreso en la Base de Datos**        | MySQL, phpMyAdmin, SQLAlchemy                                                                                              |
 | **3. Entrenamiento de Machine Learning**  | Scikit-learn, Pickle, Jupyter Notebook                                                   |
-| **4. Creación de Dashboards e Informes**  | Matplotlib, Seaborn, Plotly , Jupyter Notebook, Streamlit/Dash                            |
+| **4. Creación de Dashboards e Informes**  | Matplotlib, Seaborn, Plotly, Jupyter Notebook, Streamlit/Dash                            |
+| **5. Orquestador**                       | Apache Airflow                                                                                                            |
 | **Infraestructura y Seguridad**           | Servidor Local, Configuración de MySQL para Acceso Remoto, SSH/VPN                                                        |
 
 ---
 
-
 ### **Ejemplo de Diagrama:**
 
 1. **Ingesta de Datos y ETL**
-   - Python → Pandas/PyArrow → Transformaciones → Python
+   - MinIO → Python → Pandas/PyArrow → Transformaciones → Python
 
 2. **Ingreso en la Base de Datos**
    - Python/SQLAlchemy → MySQL → phpMyAdmin
@@ -124,5 +127,8 @@ Garantizar la seguridad es crucial cuando se permite el acceso remoto a la base 
 
 4. **Creación de Dashboards e Informes**
    - MySQL → Python/Matplotlib/Seaborn → Jupyter Notebook/Streamlit → Dashboards/Informes
+
+5. **Orquestación**
+   - Apache Airflow → Ingesta de Datos y ETL → Entrenamiento de ML → Creación de Dashboards e Informes
 
 ---
