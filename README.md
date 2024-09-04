@@ -2,22 +2,26 @@
 
 ---
 
-## **1. Ingesta de Datos y ETL (Extract, Transform, Load)**
+### **1. Ingesta de Datos y ETL (Extract, Transform, Load)**
 
-### **Herramientas y Tecnologías:**
+**Herramientas y Tecnologías:**
 
 - **Lenguaje de Programación: Python**
-  - **Descripción**: Lenguaje versátil y ampliamente utilizado en ciencia de datos y machine learning.
+  - **Descripción:** Lenguaje versátil y ampliamente utilizado en ciencia de datos y machine learning.
   
 - **Bibliotecas de Python:**
-  - **Pandas**: Para la manipulación y limpieza de datos provenientes de archivos CSV o Parquet.
-  - **PyArrow**: Para leer y escribir archivos Parquet de manera eficiente.
-
+  - **Pandas:** Para la manipulación y limpieza de datos provenientes de archivos CSV o Parquet.
+  - **PyArrow:** Para leer y escribir archivos Parquet de manera eficiente.
+  
+- **Data Lake: MinIO**
+  - **Descripción:** MinIO es un sistema de almacenamiento de objetos. Se utiliza para almacenar datos en bruto y transformados, facilitando su acceso durante las etapas de ETL.
+  
 - **Gestión de Entornos:**
-  - **visual estudio code**: Facilita la gestión de paquetes y entornos virtuales, asegurando que todas las dependencias estén correctamente instaladas.
+  - **Visual Studio Code:** Facilita la gestión de paquetes y entornos virtuales, asegurando que todas las dependencias estén correctamente instaladas.
 
-### **Justificación:**
-Python, junto con Pandas y PyArrow, proporciona una solución robusta y flexible para la ingesta y transformación de datos, permitiendo manejar diferentes formatos de archivo de manera eficiente.
+**Justificación:**
+- **Python**, junto con **Pandas** y **PyArrow**, proporciona una solución robusta y flexible para la ingesta y transformación de datos, permitiendo manejar diferentes formatos de archivo de manera eficiente.
+- **MinIO** actúa como un Data Lake, proporcionando almacenamiento centralizado y escalable para grandes volúmenes de datos en diferentes formatos, facilitando el acceso rápido y eficiente para las siguientes fases del pipeline.
 
 ---
 
