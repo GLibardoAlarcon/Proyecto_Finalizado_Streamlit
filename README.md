@@ -1,3 +1,5 @@
+![Logo del Proyecto](./imagenes/logo/Logo_ARCOPE_fondo_transparente.png)
+
 # ARCOPE Proyecto Final - Henry
 
 ## Proyecto: Data Product orientado a la sostenibilidad y rentabilidad para Uber en la ciudad de New York.
