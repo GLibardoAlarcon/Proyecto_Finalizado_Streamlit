@@ -1,4 +1,59 @@
-# ETL-P
+# ARCOPE Proyecto Final - Henry
+
+## Proyecto: Data Product orientado a la sostenibilidad y rentabilidad para Uber en la ciudad de New York.
+
+### Objetivo Principal:
+Transformar el negocio de Uber en un referente de sostenibilidad y rentabilidad a largo plazo mediante la optimización operativa, la inversión en tecnología sustentable y la mejora de la imagen corporativa, para atraer tanto a clientes conscientes del medio ambiente como a inversores interesados en sostenibilidad.
+
+### Cliente Objetivo:
+Empresa de Ride-Hailing, 'Uber', que conecta pasajeros con conductores de vehículos de alquiler a través de aplicaciones móviles y sitios web.
+
+### Estrategia de Negocio:
+Uber busca herramientas para mejorar su imagen corporativa, incrementar la rentabilidad y maximizar la eficiencia operativa, con el objetivo de alinear su negocio hacia un enfoque más sustentable y atractivo para los inversores.
+
+### Alcance:
+Proponemos un MVP centrado en analizar y procesar datos proporcionados por Uber y organismos gubernamentales, ofreciendo soluciones que permitan la toma de decisiones estratégicas basadas en sostenibilidad y rentabilidad.
+
+### Contexto:
+Ciudad de Nueva York, EEUU.
+
+### Justificación:
+El mercado está en plena transición hacia modelos sostenibles. Las empresas que adoptan prácticas sostenibles no solo mejoran su imagen pública, sino que también aseguran su rentabilidad a largo plazo al alinearse con normativas futuras. Este proyecto posicionará a Uber como líder en sostenibilidad en el sector Ride-Hailing, atrayendo a clientes conscientes del medio ambiente y ofreciendo nuevas oportunidades de negocio e incentivos fiscales.
+
+## Objetivos Particulares:
+
+### 1. Mejorar la Imagen Corporativa a través de la Sostenibilidad
+- **KPI**: Reducción de CO2 y mejora de la calidad del aire.
+- **Medir**: Comparar las emisiones de CO2 de la flota actual con una nueva flota de vehículos híbridos y eléctricos. También se medirá la calidad del aire en áreas con alta concentración de operaciones.
+- **Impacto**: Posicionamiento como líder en sostenibilidad, atracción de un segmento de mercado más consciente del medio ambiente, y mejora de la percepción pública.
+
+### 2. Incrementar la Rentabilidad a Largo Plazo mediante Inversión en Vehículos Eléctricos/Híbridos
+- **KPI**: Costos y beneficios por vehículo eléctrico en relación a la distancia recorrida.
+- **Medir**: Comparar los costos operativos y beneficios de los vehículos eléctricos frente a los de combustión interna.
+- **Impacto**: Reducción de costos operativos, acceso a incentivos fiscales, y mejora en la rentabilidad a largo plazo.
+
+### 3. Maximizar la Eficiencia Operativa y la Rentabilidad del Servicio
+- **KPI 3a**: Ingresos por milla recorrida. 
+  - **Medir**: (Total_amount - Tolls_amount - Congestion_Surcharge - Airport_fee) / Trip_distance.
+  - **Impacto**: Optimización de rutas, asignación de vehículos y tarifas para maximizar ingresos.
+  
+- **KPI 3b**: Tasa de utilización de vehículos.
+  - **Medir**: Total de viajes / Número total de horas disponibles.
+  - **Impacto**: Incremento de la rentabilidad al mejorar la utilización de la flota.
+
+- **KPI 3c**: Promedio de pasajeros por viaje.
+  - **Medir**: Promedio(Passenger_count) por zona, tipo de servicio y hora del día.
+  - **Impacto**: Fomento del uso compartido de vehículos para incrementar la rentabilidad y reducir la cantidad de vehículos necesarios.
+
+## Análisis de Impacto:
+Implementar estos KPIs proporcionará una visión clara del desempeño de Uber en términos de sostenibilidad y rentabilidad. Basándose en estos análisis, se podrán tomar decisiones estratégicas como expandir la flota de vehículos eléctricos, optimizar rutas para reducir emisiones y costos, y rediseñar campañas de marketing centradas en el compromiso ambiental.
+
+Este proyecto ayudará a Uber no solo a cumplir con sus objetivos de sostenibilidad, sino también a mejorar su imagen pública y garantizar su rentabilidad a largo plazo, consolidándose como un líder en innovación dentro del sector de Ride-Hailing.
+
+
+---
+
+## **Propuesta y Stack Tecnológico**
 
 ---
 
