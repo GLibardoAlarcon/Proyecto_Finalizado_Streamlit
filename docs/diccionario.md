@@ -29,38 +29,41 @@
 
 <a id="air_quality_cleaned.parquet"><b>air_quality_cleaned.parquet</b></a>  
 
-- **Name**: Nombre (Object)
-- **Measure**: Nedida (Object)
-- **Geo Place Name**: Nombre de Lugar Geografico (Object)
-- **Time Period**: Período de Tiempo (Object)
-- **Data Value**: Valor de Data (Float)
+### Air Quality Measurement ETL
+- **Name**: Nombre del Indicador (Object)
+- **Measure**: Medida del indicador (Object)
+- **Geo Place Name**: Nombre del barrio (Object)
+- **Time Period**: Período del tiempo al que se aplican los datos; podría ser un año, un rango de años o una temporada, por ejemplo (Object)
+- **Data Value**: El valor real de los datos para este indicador, medida, lugar y hora (Float)
 - **Year**: Año (Datetime)
 
 
 <a id="Calidad_aireL.parquet"><b>Calidad_aireL.parquet</b></a>
 
-- **indicator_id**: Indicador de Id (Integer)
-- **name**: nombre (Object)
-- **measure**: medida (Object)
-- **geo_type_name**: nombre de tipo geográfico (Object)
-- **geo_join_id**: id de geo join (Integer)
-- **data_value**: Valor de dato (Float)
-- **geo_place_name**: nombre de ubicacion geográfica (Object)
-- **measure_info**: Informacion de Medida (Object)
-- **time_period**: Perdíodo de tiempo (Object)
-- **unique_id**: Id unico (Integer)
-- **Date**: Fecha (Object) 
+### Air Quality Measurement
+- **indicator_id**: Identificador del tipo de valor medido en el tiempo y el espacio. (Integer)
+- **name**: Nombre del Indicador (Object)
+- **measure**: Medida del indicador (Object)
+- **geo_type_name**: Nombre de tipo geográfico (Object)
+- **geo_join_id**: Identificador del área geográfica del barrio, para unir a archivos de geografía cartográfica mapas temáticos (Integer)
+- **data_value**: El valor real de los datos para este indicador, medida, lugar y hora (Float)
+- **geo_place_name**: Nombre del barrio (Object)
+- **measure_info**: Información (como unidades) sobre la medida (Object)
+- **time_period**: Período de tiempo al que se aplican los datos; podría ser un año, un rango de años o una temporada, por ejemplo (Object)
+- **unique_id**: Identificador de registro único (Integer)
+- **Date**: Fecha para el inicio del período de tiempo; siempre un valor de fecha; podría ser útil para trazar una serie de tiempo (Object) 
 - **Year**: Año (Integer)
 
 <a id="costo_operacional_vehiculos_clean.csv"><b>costo_operacional_vehiculos_clean.csv</b></a>
 
+## AutoStats: Cars' Engine, Fuel & Cost Analysis
 - **Manuf**: Fabricante del vehículo: Nombre de la compañía que produce el vehículo. (Object)
 - **Model**: Modelo del vehículo: Identificación del modelo específico del vehículo. (Object)
 - **Desc**: Descripción del vehículo: Información adicional o características específicas del vehículo. (Object)
 - **Fuel_Type**: Tipo de combustible: Clasificación del tipo de energía utilizada por el vehículo (por ejemplo, Diesel, Electricidad). (Object)
-- **Fuel_Cost**: Costo de combustible (en GBP): Costo del combustible convencional para operar el vehículo, en libras esterlinas.(Float)
-- **Electric_Cost**: Costo eléctrico (en GBP): Costo de la electricidad para operar el vehículo, en libras esterlinas. (Float)
-- **Total_Cost**: Costo total (en GBP): Suma de los costos de combustible y eléctrico, en libras esterlinas. (Float)
+- **Fuel_Cost**: Costo anual combustible 10000 millas(en GBP): Costo del combustible convencional operar el vehículo, libras esterlinas.(Float)
+- **Electric_Cost**: Costo anual eléctrico 10000 millas(en GBP): Costo de la electricidad para operar el vehículo, en libras esterlinas. (Float)
+- **Total_Cost**: Costo total 10000 millas (en GBP): Suma de los costos de combustible y eléctrico, en libras esterlinas. (Float)
 - **Noise_Level** Nivel de ruido (en dB): Nivel de ruido producido por el vehículo, medido en decibelios. (Float)
 
 <a id="datos_geograficos_limpios.parquet"><b>datos_geograficos_limpios.parquet</b></a>
@@ -75,13 +78,14 @@
 <a id="datos_meteorologicos_limpios.parquet"><b>datos_meteorologicos_limpios.parquet</b></a>
 
 - **Time**: Hora  (Datetime)
-- **Temperature_2m (°C)**: Temperatura GRadis Centigrados (Object)
+- **Temperature_2m (°C)**: Temperatura Grados Centigrados (Object)
 - **rain (mm)**: Lluvia en mm (Object)
 - **is_day ()**: Es de día (Object)
 
 <a id="df_eafcs.parquet"><b>df_eafcs.parquet</b></a>
 
-- **Fuel Type Code**: Código de tipo de Combustible  (Object)
+## Electric and ALternative Fuel Charging Stations
+- **Fuel Type Code**: Código de tipo de Combustible (Object)
 - **Station Name**: Nombre de Estación (Object)
 - **Street Address**: Dirección (Object)
 - **City**: Ciudad (Object)
@@ -92,16 +96,17 @@
 
 <a id="df_vfed.parquet"><b>df_vfed.parquet</b></a>
 
+## Vehicule Fuel Economy Data
 - **Year**: Año de registro (Integer)
 - **Manufacturer**: Productor Auto (Object)
 - **Model**: Modelo Auto (Object)
-- **Miles per gallon (mpg)**: Millas por galón para Eléctricos y a Gas este numero es equivalente millas per galón (Float)
+- **Miles per gallon (mpg)**: Millas por galón. Para Eléctricos y a Gas este numero es equivalente millas per galón (Float)
 - **CO2 (g p/mile)**: CO2 por milla -1 si no existe la informacion (Float)
-- **FuelCost**: Costo de Combustible (Float)   
-- **FuelCostA**: Costo de Combustible Alternativo (Float)  
-- **Fuel**: Combustible (Object)
-- **Category**: Categoria Auto (Object)  
-- **AlternativeFuel**: Combustible Alternativo (Object)
+- **FuelCost**: Costo de Combustible Anual basado on 15,000 millas, 55% conduciendo ciudad, precio del combustible usado. (Float)   
+- **FuelCostA**: Costo de Combustible Alternativo Anual basado on 15,000 millas, 55% conduciendo ciudad, precio del combustible usado. (Float)  
+- **Fuel**: Combustible para vehiculos convencionales este es el unico combustible. Para hibridos, será el convencional (Object)
+- **Category**: Clase de tamaño del vehículo (Object)  
+- **AlternativeFuel**: Combustible Alternativo para vehiculos hibridos (e.g. E85, Electricity, CNG, LPG). Para convencionales 'No' (Object)
 
 <a id="energy_clean.csv"><b>energy_clean.csv</b></a>
 
