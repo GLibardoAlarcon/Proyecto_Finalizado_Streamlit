@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 modelo de entidad-relación (ER) de forma escrita y estructurada, utilizando tablas para detallar las entidades, sus atributos y las relaciones entre ellas. 
+=======
+ modelo de entidad-relación (ER), utilizando tablas para detallar las entidades, sus atributos y las relaciones entre ellas. 
+>>>>>>> 6092b824363d310c0380ba81d838910904e296e8
 
 ### 1. **Entidad: Air Quality Measurement**
 | Atributo          | Tipo de dato   | Descripción                                          |
@@ -105,7 +109,14 @@ modelo de entidad-relación (ER) de forma escrita y estructurada, utilizando tab
 
 Este es el informe estructurado del modelo ER. Cada tabla representa una entidad, sus atributos y las relaciones más importantes con otras entidades dentro de la base de datos.
 
+<<<<<<< HEAD
 descripcion clara de las relaciones entre las entidades del modelo de entidad-relación (ER), podemos apoyarnos en una explicación escrita detallada que simule la representación gráfica. A continuación, explico cómo las entidades están relacionadas entre sí y cómo fluyen los datos entre ellas.
+=======
+---
+---
+
+Para describir de manera clara las relaciones entre las entidades del modelo de entidad-relación (ER) podemos apoyarnos en una explicación escrita detallada que simule la representación gráfica. A continuación, explico cómo las entidades están relacionadas entre sí y cómo fluyen los datos entre ellas.
+>>>>>>> 6092b824363d310c0380ba81d838910904e296e8
 
 ### Relación 1: **Ubicaciones Geográficas y Viajes (Trips - Geographic Data)**
 
