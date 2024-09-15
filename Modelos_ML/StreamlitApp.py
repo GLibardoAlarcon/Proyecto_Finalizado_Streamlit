@@ -95,7 +95,7 @@ if not df.empty:
 
         # Mostrar la clasificación de costos
         st.write('Clasificación de costos:')
-        clasificacion_costo = df[df_costos['fuel_type'] == tipo_combustible]['Categoria_Costo'].value_counts()
+        clasificacion_costo = df_costos[df_costos['fuel_type'] == tipo_combustible]['Categoria_Costo'].value_counts()
         st.write(clasificacion_costo)
 else:
     st.write('No hay autos disponibles para el tipo seleccionado.')
