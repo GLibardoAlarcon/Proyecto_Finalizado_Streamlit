@@ -15,11 +15,20 @@ df = pd.read_csv('./Data/costo_operacional_vehiculos_clean.csv', sep=',')
 low_cost_threshold = df_costos['resale_price'].quantile(0.33)
 high_cost_threshold = df_costos['resale_price'].quantile(0.66)
 
-# Función para categorizar los vehículos en df_autos
+# Función para categorizar los vehículos en df
 def categorize_vehicle(row):
     if row['Fuel_Type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
         return 'Convencional'
     elif row['Fuel_Type'] in ['Electricity', 'Electric']:
+        return 'Eléctrico'
+    else:
+        return 'Híbrido'
+    
+# Función para categorizar los vehículos en df
+def categorize_vehicle2(row):
+    if row['fuel_type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
+        return 'Convencional'
+    elif row['fuel_type'] in ['Electricity', 'Electric']:
         return 'Eléctrico'
     else:
         return 'Híbrido'
@@ -28,7 +37,7 @@ def categorize_vehicle(row):
 df['Vehicle_Type'] = df.apply(categorize_vehicle, axis=1)
 
 # Aplicar la función al dataframe
-df['Vehicle_Type'] = df_costos.apply(categorize_vehicle, axis=1)
+df['Vehicle_Type'] = df_costos.apply(categorize_vehicle2, axis=1)
 
 # Función para clasificar el costo
 def clasificar_costo(total_cost):
@@ -52,23 +61,11 @@ def calcular_costo_operativo(tipo_combustible):
         return round(costo_promedio, 2), round(contaminacion_sonora_promedio, 2)
     return 0, 0
 
-# Función para categorizar los vehículos en df_autos
-def categorize_vehicle(row):
-    if row['Fuel_Type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
-        return 'Convencional'
-    elif row['Fuel_Type'] in ['Electricity', 'Electric']:
-        return 'Eléctrico'
-    else:
-        return 'Híbrido'
-
 # Streamlit App
 st.title('Evaluación de Autos')
 
 # Selección del tipo de auto
 auto_type = st.selectbox('Selecciona el tipo de auto:', ['Convencional', 'Híbrido', 'Eléctrico'])
-
-
-
 
 # Mostrar detalles del auto seleccionado
 if not df.empty:
