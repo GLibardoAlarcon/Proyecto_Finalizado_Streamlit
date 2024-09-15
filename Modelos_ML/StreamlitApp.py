@@ -24,7 +24,7 @@ def categorize_vehicle(row):
     else:
         return 'Híbrido'
     
-# Función para categorizar los vehículos en df
+# Función para categorizar los vehículos en df_costos
 def categorize_vehicle2(row):
     if row['fuel_type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
         return 'Convencional'
@@ -37,7 +37,7 @@ def categorize_vehicle2(row):
 df['Vehicle_Type'] = df.apply(categorize_vehicle, axis=1)
 
 # Aplicar la función al dataframe
-df['Vehicle_Type'] = df_costos.apply(categorize_vehicle2, axis=1)
+df_costos['Vehicle_Type'] = df_costos.apply(categorize_vehicle2, axis=1)
 
 # Función para clasificar el costo
 def clasificar_costo(total_cost):
@@ -67,6 +67,29 @@ st.title('Evaluación de Autos')
 # Selección del tipo de auto
 auto_type = st.selectbox('Selecciona el tipo de auto:', ['Convencional', 'Híbrido', 'Eléctrico'])
 
+# Entrada del presupuesto por parte del cliente
+presupuesto_cliente = st.number_input('Ingresa tu presupuesto (en dólares):', min_value=0)
+
+# Mostrar autos recomendados dentro del presupuesto
+if presupuesto_cliente > 0:
+    st.write(f'Autos recomendados dentro de tu presupuesto de ${presupuesto_cliente}:')
+    
+    # Filtrar los autos dentro del presupuesto
+    autos_recomendados = df_costos[df_costos['resale_price'] <= presupuesto_cliente].sort_values(by='resale_price').head(5)
+    
+    # Si hay autos que cumplen el criterio
+    if not autos_recomendados.empty:
+        st.write(autos_recomendados[['full_name', 'registered_year', 'fuel_type', 'resale_price']].rename(
+            columns={
+                'full_name': 'Nombre Completo',
+                'registered_year': 'Año',
+                'fuel_type': 'Tipo de Combustible',
+                'resale_price': 'Precio en Dólares'
+            }
+        ).round({'Precio en Dólares': 2}))
+    else:
+        st.write('No se encontraron autos dentro de tu presupuesto.')
+
 # Mostrar detalles del auto seleccionado
 if not df.empty:
     st.write('Detalles del auto seleccionado:')
@@ -80,9 +103,9 @@ if not df.empty:
                 'full_name': 'Nombre Completo',
                 'registered_year': 'Año',
                 'fuel_type': 'Tipo de Combustible',
-                'resale_price': 'Precio en Dolares'
+                'resale_price': 'Precio en Dólares'
             }
-        ).round({'Precio en Dolares': 2}))
+        ).round({'Precio en Dólares': 2}))
 
         # Obtener el tipo de combustible del auto seleccionado
         tipo_combustible = auto_data['fuel_type'].values[0]
@@ -99,4 +122,3 @@ if not df.empty:
         st.write(clasificacion_costo)
 else:
     st.write('No hay autos disponibles para el tipo seleccionado.')
-
