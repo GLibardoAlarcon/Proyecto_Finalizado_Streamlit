@@ -70,11 +70,11 @@ auto_type = st.selectbox('Selecciona el tipo de auto:', ['Convencional', 'Híbri
 # Mostrar detalles del auto seleccionado
 if not df.empty:
     st.write('Detalles del auto seleccionado:')
-    autos_list = df['full_name'].unique()
+    autos_list = df_costos['full_name'].unique()
     selected_auto = st.selectbox('Selecciona un auto:', autos_list)
 
     if selected_auto:
-        auto_data = df[df['full_name'] == selected_auto]
+        auto_data = df_costos[df_costos['full_name'] == selected_auto]
         st.write(auto_data[['full_name', 'registered_year', 'fuel_type', 'resale_price']].rename(
             columns={
                 'full_name': 'Nombre Completo',
@@ -95,7 +95,7 @@ if not df.empty:
 
         # Mostrar la clasificación de costos
         st.write('Clasificación de costos:')
-        clasificacion_costo = df_costos[df_costos['Fuel_Type'] == tipo_combustible]['Categoria_Costo'].value_counts()
+        clasificacion_costo = df[df_costos['Fuel_Type'] == tipo_combustible]['Categoria_Costo'].value_counts()
         st.write(clasificacion_costo)
 else:
     st.write('No hay autos disponibles para el tipo seleccionado.')
