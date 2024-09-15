@@ -6,14 +6,14 @@ import joblib
 model = joblib.load('./Modelos_ML/random_forest_regressor.joblib')
 
 # Cargar el dataset principal
-df = pd.read_csv('./Data/car_resale_prices_clean.csv')
+df_costos = pd.read_csv('./Data/car_resale_prices_clean.csv')
 
 # Cargar el dataset de costos operacionales
 df = pd.read_csv('./Data/costo_operacional_vehiculos_clean.csv', sep=',')
 
 # Calcular umbrales de costos para clasificación
-low_cost_threshold = df['Total_Cost'].quantile(0.33)
-high_cost_threshold = df['Total_Cost'].quantile(0.66)
+low_cost_threshold = df_costos['Total_Cost'].quantile(0.33)
+high_cost_threshold = df_costos['Total_Cost'].quantile(0.66)
 
 # Función para clasificar el costo
 def clasificar_costo(total_cost):
@@ -25,17 +25,26 @@ def clasificar_costo(total_cost):
         return 'Caro'
 
 # Agregar la columna de categoría de costo al dataset de costos
-df['Categoria_Costo'] = df['Total_Cost'].apply(clasificar_costo)
+df_costos['Categoria_Costo'] = df_costos['Total_Cost'].apply(clasificar_costo)
 
 # Función para calcular el costo operativo estimado
 def calcular_costo_operativo(tipo_combustible):
     tipo_combustible = tipo_combustible.capitalize()
-    if tipo_combustible in df_costos['Fuel_Type'].unique():
-        datos = df_costos[df_costos['Fuel_Type'] == tipo_combustible]
+    if tipo_combustible in df['Fuel_Type'].unique():
+        datos = df[df['Fuel_Type'] == tipo_combustible]
         costo_promedio = datos['Total_Cost'].mean()
         contaminacion_sonora_promedio = datos['Noise_Level'].mean()
         return round(costo_promedio, 2), round(contaminacion_sonora_promedio, 2)
     return 0, 0
+
+# Función para categorizar los vehículos en df_autos
+def categorize_vehicle(row):
+    if row['Fuel_Type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
+        return 'Convencional'
+    elif row['Fuel_Type'] in ['Electricity', 'Electric']:
+        return 'Eléctrico'
+    else:
+        return 'Híbrido'
 
 # Streamlit App
 st.title('Evaluación de Autos')
@@ -43,17 +52,21 @@ st.title('Evaluación de Autos')
 # Selección del tipo de auto
 auto_type = st.selectbox('Selecciona el tipo de auto:', ['Convencional', 'Híbrido', 'Eléctrico'])
 
-# Filtrar el dataset según el tipo de auto
-filtered_df = df[df['Vehicle_Type_' + auto_type] == 1]
+# Aplicar la función al dataframe
+df['Vehicle_Type'] = df.apply(categorize_vehicle, axis=1)
+
+# Aplicar la función al dataframe
+df['Vehicle_Type'] = df_costos.apply(categorize_vehicle, axis=1)
+
 
 # Mostrar detalles del auto seleccionado
-if not filtered_df.empty:
+if not df.empty:
     st.write('Detalles del auto seleccionado:')
-    autos_list = filtered_df['full_name'].unique()
+    autos_list = df['full_name'].unique()
     selected_auto = st.selectbox('Selecciona un auto:', autos_list)
 
     if selected_auto:
-        auto_data = filtered_df[filtered_df['full_name'] == selected_auto]
+        auto_data = df[df['full_name'] == selected_auto]
         st.write(auto_data[['full_name', 'registered_year', 'fuel_type', 'resale_price']].rename(
             columns={
                 'full_name': 'Nombre Completo',
