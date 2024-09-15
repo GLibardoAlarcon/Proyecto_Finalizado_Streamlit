@@ -9,7 +9,7 @@ model = joblib.load('./Modelos_ML/random_forest_regressor.joblib')
 df = pd.read_csv('./Data/car_resale_prices_clean.csv')
 
 # Cargar el dataset de costos operacionales
-df_costos = pd.read_csv('./Data/costo_operacional_vehiculos_clean.csv')
+df = pd.read_csv('./Data/costo_operacional_vehiculos_clean.csv', sep=',')
 
 # Calcular umbrales de costos para clasificación
 low_cost_threshold = df['Total_Cost'].quantile(0.33)
