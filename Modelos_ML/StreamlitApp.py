@@ -12,8 +12,8 @@ df_costos = pd.read_csv('./Data/car_resale_prices_clean.csv')
 df = pd.read_csv('./Data/costo_operacional_vehiculos_clean.csv', sep=',')
 
 # Calcular umbrales de costos para clasificación
-low_cost_threshold = df_costos['Total_Cost'].quantile(0.33)
-high_cost_threshold = df_costos['Total_Cost'].quantile(0.66)
+low_cost_threshold = df_costos['resale_price'].quantile(0.33)
+high_cost_threshold = df_costos['resale_price'].quantile(0.66)
 
 # Función para clasificar el costo
 def clasificar_costo(total_cost):
@@ -25,7 +25,7 @@ def clasificar_costo(total_cost):
         return 'Caro'
 
 # Agregar la columna de categoría de costo al dataset de costos
-df_costos['Categoria_Costo'] = df_costos['Total_Cost'].apply(clasificar_costo)
+df_costos['Categoria_Costo'] = df_costos['resale_price'].apply(clasificar_costo)
 
 # Función para calcular el costo operativo estimado
 def calcular_costo_operativo(tipo_combustible):
