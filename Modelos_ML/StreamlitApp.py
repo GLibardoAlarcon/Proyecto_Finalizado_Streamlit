@@ -32,7 +32,7 @@ def calcular_costo_operativo(tipo_combustible):
     tipo_combustible = tipo_combustible.capitalize()
     if tipo_combustible in df['Fuel_Type'].unique():
         datos = df[df['Fuel_Type'] == tipo_combustible]
-        costo_promedio = datos['Total_Cost'].mean()
+        costo_promedio = datos['resale_price'].mean()
         contaminacion_sonora_promedio = datos['Noise_Level'].mean()
         return round(costo_promedio, 2), round(contaminacion_sonora_promedio, 2)
     return 0, 0
