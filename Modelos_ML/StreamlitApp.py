@@ -15,6 +15,21 @@ df = pd.read_csv('./Data/costo_operacional_vehiculos_clean.csv', sep=',')
 low_cost_threshold = df_costos['resale_price'].quantile(0.33)
 high_cost_threshold = df_costos['resale_price'].quantile(0.66)
 
+# Función para categorizar los vehículos en df_autos
+def categorize_vehicle(row):
+    if row['Fuel_Type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
+        return 'Convencional'
+    elif row['Fuel_Type'] in ['Electricity', 'Electric']:
+        return 'Eléctrico'
+    else:
+        return 'Híbrido'
+
+# Aplicar la función al dataframe
+df['Vehicle_Type'] = df.apply(categorize_vehicle, axis=1)
+
+# Aplicar la función al dataframe
+df['Vehicle_Type'] = df_costos.apply(categorize_vehicle, axis=1)
+
 # Función para clasificar el costo
 def clasificar_costo(total_cost):
     if total_cost <= low_cost_threshold:
@@ -52,11 +67,7 @@ st.title('Evaluación de Autos')
 # Selección del tipo de auto
 auto_type = st.selectbox('Selecciona el tipo de auto:', ['Convencional', 'Híbrido', 'Eléctrico'])
 
-# Aplicar la función al dataframe
-df['Vehicle_Type'] = df.apply(categorize_vehicle, axis=1)
 
-# Aplicar la función al dataframe
-df['Vehicle_Type'] = df_costos.apply(categorize_vehicle, axis=1)
 
 
 # Mostrar detalles del auto seleccionado
