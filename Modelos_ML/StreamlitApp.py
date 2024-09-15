@@ -6,14 +6,15 @@ import joblib
 model = joblib.load('./Modelos_ML/random_forest_regressor.joblib')
 
 # Cargar el dataset principal
-df = pd.read_csv('..Data/car_resale_prices_clean.csv')
+df = pd.read_csv('../Data/car_resale_prices_clean.csv')
+
 
 # Cargar el dataset de costos operacionales
 df_costos = pd.read_csv('../Data/costo_operacional_vehiculos_clean.csv')
 
 # Calcular umbrales de costos para clasificación
-low_cost_threshold = df_costos['Total_Cost'].quantile(0.33)
-high_cost_threshold = df_costos['Total_Cost'].quantile(0.66)
+low_cost_threshold = df['Total_Cost'].quantile(0.33)
+high_cost_threshold = df['Total_Cost'].quantile(0.66)
 
 # Función para clasificar el costo
 def clasificar_costo(total_cost):
@@ -25,7 +26,7 @@ def clasificar_costo(total_cost):
         return 'Caro'
 
 # Agregar la columna de categoría de costo al dataset de costos
-df_costos['Categoria_Costo'] = df_costos['Total_Cost'].apply(clasificar_costo)
+df['Categoria_Costo'] = df['Total_Cost'].apply(clasificar_costo)
 
 # Función para calcular el costo operativo estimado
 def calcular_costo_operativo(tipo_combustible):
