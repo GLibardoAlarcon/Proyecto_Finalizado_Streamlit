@@ -21,39 +21,29 @@ df = pd.read_csv('./Data/costo_operacional_vehiculos_clean.csv', sep=',')
 low_cost_threshold = df_costos['resale_price'].quantile(0.33)
 high_cost_threshold = df_costos['resale_price'].quantile(0.66)
 
-# Función para categorizar los vehículos
-def categorize_vehicle2(row):
+# Revisa la función de categorización de vehículos
+def categorize_vehicle(row):
     if row['fuel_type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
         return 'Convencional'
     elif row['fuel_type'] in ['Electricity', 'Electric']:
         return 'Eléctrico'
     else:
         return 'Híbrido'
-
-# Aplicar la categorización
-df_costos['Vehicle_Type'] = df_costos.apply(categorize_vehicle2, axis=1)
-
-# Función para clasificar el costo
-def clasificar_costo(total_cost):
-    if total_cost <= low_cost_threshold:
-        return 'Económico'
-    elif total_cost <= high_cost_threshold:
-        return 'Normal'
+    
+# Revisa la función de categorización de vehículos
+def categorize_vehicle2(row):
+    if row['Fuel_Type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
+        return 'Convencional'
+    elif row['Fuel_Type'] in ['Electricity', 'Electric']:
+        return 'Eléctrico'
     else:
-        return 'Caro'
+        return 'Híbrido'
 
-# Agregar la columna de categoría de costo al dataset
-df_costos['Categoria_Costo'] = df_costos['resale_price'].apply(clasificar_costo)
+# Aplicar la función al dataframe
+df_costos['Vehicle_Type'] = df_costos.apply(categorize_vehicle, axis=1)
 
-# Función para calcular el costo operativo estimado
-def calcular_costo_operativo(tipo_combustible):
-    tipo_combustible = tipo_combustible.capitalize()
-    if tipo_combustible in df['Fuel_Type'].unique():
-        datos = df[df['Fuel_Type'] == tipo_combustible]
-        costo_promedio = datos['Fuel_Cost'].mean()
-        contaminacion_sonora_promedio = datos['Noise_Level'].mean()
-        return round(costo_promedio, 2), round(contaminacion_sonora_promedio, 2)
-    return 0, 0
+# Aplicar la función al dataframe
+df['Vehicle_Type'] = df_costos.apply(categorize_vehicle2, axis=1)
 
 # Streamlit App
 st.title('Evaluación de Autos')
@@ -64,53 +54,37 @@ presupuesto_cliente = st.number_input('Ingresa tu presupuesto (en dólares):', m
 # Mostrar autos recomendados dentro del presupuesto
 if presupuesto_cliente > 0:
     st.write(f'Autos recomendados dentro de tu presupuesto de ${presupuesto_cliente}:')
-
+    
     # Filtrar los autos dentro del presupuesto
-    autos_filtrados = df_costos[df_costos['resale_price'] <= presupuesto_cliente]
-
-    # Ordenar y mostrar los 5 primeros
-    autos_recomendados = autos_filtrados.sort_values(by='resale_price').head(5)
-
-    # Mostrar los autos recomendados
+    autos_recomendados = df_costos[df_costos['resale_price'] <= presupuesto_cliente].sort_values(by='resale_price', ascending=False).head(5)
+    
+    # Si hay autos que cumplen el criterio
     if not autos_recomendados.empty:
-        st.write(autos_recomendados[['full_name', 'registered_year', 'Vehicle_Type', 'resale_price']].rename(
+        st.write(autos_recomendados[['full_name', 'registered_year', 'fuel_type', 'resale_price', 'Vehicle_Type']].rename(
             columns={
                 'full_name': 'Nombre Completo',
                 'registered_year': 'Año',
-                'Vehicle_Type': 'Tipo de Combustible',
-                'resale_price': 'Precio en Dólares'
+                'fuel_type': 'Tipo de Combustible',
+                'resale_price': 'Precio en Dólares',
+                'Vehicle_Type': 'Clasificación de Combustible'
             }
         ).round({'Precio en Dólares': 2}))
     else:
         st.write('No se encontraron autos dentro de tu presupuesto.')
 
-    # Selección de autos
-    st.write('Selecciona un auto para ver más detalles:')
-    autos_list = autos_recomendados['full_name'].unique()
-    selected_auto = st.selectbox('Selecciona un auto:', autos_list)
+# Mostrar detalles del auto seleccionado
+st.write('Detalles del auto seleccionado:')
+autos_list = df_costos['full_name'].unique()
+selected_auto = st.selectbox('Selecciona un auto:', autos_list)
 
-    # Mostrar detalles del auto seleccionado
-    if selected_auto:
-        auto_data = df_costos[df_costos['full_name'] == selected_auto]
-        st.write(auto_data[['full_name', 'registered_year', 'fuel_type', 'resale_price']].rename(
-            columns={
-                'full_name': 'Nombre Completo',
-                'registered_year': 'Año',
-                'fuel_type': 'Tipo de Combustible',
-                'resale_price': 'Precio en Dólares'
-            }
-        ).round({'Precio en Dólares': 2}))
-
-        # Mostrar si es caro, normal o económico
-        categoria_costo = auto_data['Categoria_Costo'].values[0]
-        st.write(f"Este auto está clasificado como: **{categoria_costo}**")
-
-        # Calcular el costo operativo y la contaminación sonora
-        tipo_combustible = auto_data['fuel_type'].values[0]
-        costo_operativo, contaminacion_sonora = calcular_costo_operativo(tipo_combustible)
-
-        st.write(f'Costo operativo estimado por cada 10,000 km para tipo de combustible "{tipo_combustible}": ${costo_operativo}')
-        st.write(f'Contaminación sonora promedio para tipo de combustible "{tipo_combustible}": {contaminacion_sonora} Db')
-
-else:
-    st.write('Ingresa un presupuesto para ver recomendaciones de autos.')
+if selected_auto:
+    auto_data = df_costos[df_costos['full_name'] == selected_auto]
+    st.write(auto_data[['full_name', 'registered_year', 'fuel_type', 'resale_price', 'Vehicle_Type']].rename(
+        columns={
+            'full_name': 'Nombre Completo',
+            'registered_year': 'Año',
+            'fuel_type': 'Tipo de Combustible',
+            'resale_price': 'Precio en Dólares',
+            'Vehicle_Type': 'Clasificación de Combustible'
+        }
+    ).round({'Precio en Dólares': 2}))
