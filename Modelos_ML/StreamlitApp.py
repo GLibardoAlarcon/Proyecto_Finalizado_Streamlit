@@ -8,9 +8,11 @@ model = joblib.load('./Modelos_ML/random_forest_regressor.joblib')
 # Cargar el dataset principal
 df_costos = pd.read_csv('./Data/car_resale_prices_clean.csv')
 
-# Asegurarse de que 'resale_price' sea numérico y sin valores nulos
+# Asegurarnos de que resale_price sea numérico
 df_costos['resale_price'] = pd.to_numeric(df_costos['resale_price'], errors='coerce')
-df_costos.dropna(subset=['resale_price'], inplace=True)  # Eliminar filas con precios nulos
+
+# Verificar si hay valores nulos o incorrectos en resale_price
+df_costos = df_costos.dropna(subset=['resale_price'])
 
 # Cargar el dataset de costos operacionales
 df = pd.read_csv('./Data/costo_operacional_vehiculos_clean.csv', sep=',')
@@ -19,29 +21,16 @@ df = pd.read_csv('./Data/costo_operacional_vehiculos_clean.csv', sep=',')
 low_cost_threshold = df_costos['resale_price'].quantile(0.33)
 high_cost_threshold = df_costos['resale_price'].quantile(0.66)
 
-# Funciones de categorización de vehículos
-def categorize_vehicle(row):
-    if row['Fuel_Type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
-        return 'Convencional'
-    elif row['Fuel_Type'] in ['Electricity', 'Electric']:
-        return 'Eléctrico'
-    elif row['Fuel_Type'] == 'Hybrid':
-        return 'Híbrido'
-    else:
-        return 'Otro'
-
+# Función para categorizar los vehículos
 def categorize_vehicle2(row):
     if row['fuel_type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
         return 'Convencional'
     elif row['fuel_type'] in ['Electricity', 'Electric']:
         return 'Eléctrico'
-    elif row['fuel_type'] == 'Hybrid':
-        return 'Híbrido'
     else:
-        return 'Otro'
+        return 'Híbrido'
 
-# Aplicar categorización a ambos dataframes
-df['Vehicle_Type'] = df.apply(categorize_vehicle, axis=1)
+# Aplicar la categorización
 df_costos['Vehicle_Type'] = df_costos.apply(categorize_vehicle2, axis=1)
 
 # Función para clasificar el costo
@@ -53,7 +42,7 @@ def clasificar_costo(total_cost):
     else:
         return 'Caro'
 
-# Agregar la columna de categoría de costo al dataset de costos
+# Agregar la columna de categoría de costo al dataset
 df_costos['Categoria_Costo'] = df_costos['resale_price'].apply(clasificar_costo)
 
 # Función para calcular el costo operativo estimado
@@ -95,7 +84,7 @@ if presupuesto_cliente > 0:
     else:
         st.write('No se encontraron autos dentro de tu presupuesto.')
 
-    # Ahora, mover la selección del auto debajo de las recomendaciones
+    # Selección de autos
     st.write('Selecciona un auto para ver más detalles:')
     autos_list = autos_recomendados['full_name'].unique()
     selected_auto = st.selectbox('Selecciona un auto:', autos_list)
@@ -125,5 +114,3 @@ if presupuesto_cliente > 0:
 
 else:
     st.write('Ingresa un presupuesto para ver recomendaciones de autos.')
-
-
