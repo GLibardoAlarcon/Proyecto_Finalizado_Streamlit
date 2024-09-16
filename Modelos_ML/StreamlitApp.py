@@ -6,7 +6,10 @@ import joblib
 model = joblib.load('./Modelos_ML/random_forest_regressor.joblib')
 
 # Cargar el dataset principal
-df_costos = pd.read_csv('./Data/car_resale_prices_clean.csv')
+df_costos = pd.read_csv('./Data/car_resale_prices_clean.csv', sep=',')
+
+# Cargar el dataset de costos operacionales
+df = pd.read_csv('./Data/costo_operacional_vehiculos_clean.csv', sep=',')
 
 # Asegurarnos de que resale_price sea numérico
 df_costos['resale_price'] = pd.to_numeric(df_costos['resale_price'], errors='coerce')
