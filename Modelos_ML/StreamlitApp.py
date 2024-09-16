@@ -8,7 +8,7 @@ model = joblib.load('./Modelos_ML/random_forest_regressor.joblib')
 # Cargar el dataset principal
 df_costos = pd.read_csv('./Data/car_resale_prices_clean.csv')
 
-# Verificar que resale_price sea numérico
+# Asegurar que resale_price sea numérico
 df_costos['resale_price'] = pd.to_numeric(df_costos['resale_price'], errors='coerce')
 
 # Cargar el dataset de costos operacionales
@@ -64,15 +64,8 @@ def calcular_costo_operativo(tipo_combustible):
 # Streamlit App
 st.title('Evaluación de Autos')
 
-# Selección del tipo de auto
-auto_type = st.selectbox('Selecciona el tipo de auto:', ['Convencional', 'Híbrido', 'Eléctrico'])
-
 # Entrada del presupuesto por parte del cliente
 presupuesto_cliente = st.number_input('Ingresa tu presupuesto (en dólares):', min_value=0)
-
-# Verificación de tipo de datos
-st.write(df_costos[['full_name', 'resale_price']].dtypes)
-st.write(f"Presupuesto Cliente: {presupuesto_cliente}, Tipo: {type(presupuesto_cliente)}")
 
 # Mostrar autos recomendados dentro del presupuesto
 if presupuesto_cliente > 0:
@@ -80,14 +73,11 @@ if presupuesto_cliente > 0:
 
     # Filtrar los autos dentro del presupuesto
     autos_filtrados = df_costos[df_costos['resale_price'] <= presupuesto_cliente]
-    
-    # Mostrar autos filtrados para depuración
-    st.write(autos_filtrados[['full_name', 'resale_price']])
 
     # Ordenar y mostrar los 5 primeros
     autos_recomendados = autos_filtrados.sort_values(by='resale_price').head(5)
 
-    # Si hay autos que cumplen el criterio
+    # Mostrar los autos recomendados
     if not autos_recomendados.empty:
         st.write(autos_recomendados[['full_name', 'registered_year', 'fuel_type', 'resale_price']].rename(
             columns={
@@ -100,12 +90,12 @@ if presupuesto_cliente > 0:
     else:
         st.write('No se encontraron autos dentro de tu presupuesto.')
 
-# Mostrar detalles del auto seleccionado
-if not df.empty:
-    st.write('Detalles del auto seleccionado:')
-    autos_list = df_costos['full_name'].unique()
+    # Ahora, mover la selección del auto debajo de las recomendaciones
+    st.write('Selecciona un auto para ver más detalles:')
+    autos_list = autos_recomendados['full_name'].unique()
     selected_auto = st.selectbox('Selecciona un auto:', autos_list)
 
+    # Mostrar detalles del auto seleccionado
     if selected_auto:
         auto_data = df_costos[df_costos['full_name'] == selected_auto]
         st.write(auto_data[['full_name', 'registered_year', 'fuel_type', 'resale_price']].rename(
@@ -117,18 +107,16 @@ if not df.empty:
             }
         ).round({'Precio en Dólares': 2}))
 
-        # Obtener el tipo de combustible del auto seleccionado
-        tipo_combustible = auto_data['fuel_type'].values[0]
+        # Mostrar si es caro, normal o económico
+        categoria_costo = auto_data['Categoria_Costo'].values[0]
+        st.write(f"Este auto está clasificado como: **{categoria_costo}**")
 
         # Calcular el costo operativo y la contaminación sonora
+        tipo_combustible = auto_data['fuel_type'].values[0]
         costo_operativo, contaminacion_sonora = calcular_costo_operativo(tipo_combustible)
 
         st.write(f'Costo operativo estimado por cada 10,000 km para tipo de combustible "{tipo_combustible}": ${costo_operativo}')
         st.write(f'Contaminación sonora promedio para tipo de combustible "{tipo_combustible}": {contaminacion_sonora} Db')
 
-        # Mostrar la clasificación de costos
-        st.write('Clasificación de costos:')
-        clasificacion_costo = df_costos[df_costos['fuel_type'] == tipo_combustible]['Categoria_Costo'].value_counts()
-        st.write(clasificacion_costo)
 else:
-    st.write('No hay autos disponibles para el tipo seleccionado.')
+    st.write('Ingresa un presupuesto para ver recomendaciones de autos.')
