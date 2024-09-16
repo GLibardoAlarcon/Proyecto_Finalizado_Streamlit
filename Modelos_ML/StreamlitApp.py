@@ -8,8 +8,9 @@ model = joblib.load('./Modelos_ML/random_forest_regressor.joblib')
 # Cargar el dataset principal
 df_costos = pd.read_csv('./Data/car_resale_prices_clean.csv')
 
-# Asegurar que resale_price sea numérico
+# Asegurarse de que 'resale_price' sea numérico y sin valores nulos
 df_costos['resale_price'] = pd.to_numeric(df_costos['resale_price'], errors='coerce')
+df_costos.dropna(subset=['resale_price'], inplace=True)  # Eliminar filas con precios nulos
 
 # Cargar el dataset de costos operacionales
 df = pd.read_csv('./Data/costo_operacional_vehiculos_clean.csv', sep=',')
@@ -24,16 +25,20 @@ def categorize_vehicle(row):
         return 'Convencional'
     elif row['Fuel_Type'] in ['Electricity', 'Electric']:
         return 'Eléctrico'
-    else:
+    elif row['Fuel_Type'] == 'Hybrid':
         return 'Híbrido'
+    else:
+        return 'Otro'
 
 def categorize_vehicle2(row):
     if row['fuel_type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
         return 'Convencional'
     elif row['fuel_type'] in ['Electricity', 'Electric']:
         return 'Eléctrico'
-    else:
+    elif row['fuel_type'] == 'Hybrid':
         return 'Híbrido'
+    else:
+        return 'Otro'
 
 # Aplicar categorización a ambos dataframes
 df['Vehicle_Type'] = df.apply(categorize_vehicle, axis=1)
@@ -79,11 +84,11 @@ if presupuesto_cliente > 0:
 
     # Mostrar los autos recomendados
     if not autos_recomendados.empty:
-        st.write(autos_recomendados[['full_name', 'registered_year', 'fuel_type', 'resale_price']].rename(
+        st.write(autos_recomendados[['full_name', 'registered_year', 'Vehicle_Type', 'resale_price']].rename(
             columns={
                 'full_name': 'Nombre Completo',
                 'registered_year': 'Año',
-                'fuel_type': 'Tipo de Combustible',
+                'Vehicle_Type': 'Tipo de Combustible',
                 'resale_price': 'Precio en Dólares'
             }
         ).round({'Precio en Dólares': 2}))
@@ -120,3 +125,5 @@ if presupuesto_cliente > 0:
 
 else:
     st.write('Ingresa un presupuesto para ver recomendaciones de autos.')
+
+
