@@ -15,7 +15,7 @@ df = pd.read_csv('./Data/costo_operacional_vehiculos_clean.csv', sep=',')
 low_cost_threshold = df_costos['resale_price'].quantile(0.33)
 high_cost_threshold = df_costos['resale_price'].quantile(0.66)
 
-# Función para categorizar los vehículos en df
+# Funciones de categorización de vehículos
 def categorize_vehicle(row):
     if row['Fuel_Type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
         return 'Convencional'
@@ -24,7 +24,6 @@ def categorize_vehicle(row):
     else:
         return 'Híbrido'
     
-# Función para categorizar los vehículos en df_costos
 def categorize_vehicle2(row):
     if row['fuel_type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
         return 'Convencional'
@@ -33,10 +32,8 @@ def categorize_vehicle2(row):
     else:
         return 'Híbrido'
 
-# Aplicar la función al dataframe
+# Aplicar categorización a ambos dataframes
 df['Vehicle_Type'] = df.apply(categorize_vehicle, axis=1)
-
-# Aplicar la función al dataframe
 df_costos['Vehicle_Type'] = df_costos.apply(categorize_vehicle2, axis=1)
 
 # Función para clasificar el costo
@@ -56,8 +53,8 @@ def calcular_costo_operativo(tipo_combustible):
     tipo_combustible = tipo_combustible.capitalize()
     if tipo_combustible in df['Fuel_Type'].unique():
         datos = df[df['Fuel_Type'] == tipo_combustible]
-        costo_promedio = df['Fuel_Cost'].mean()
-        contaminacion_sonora_promedio = df['Noise_Level'].mean()
+        costo_promedio = datos['Fuel_Cost'].mean()
+        contaminacion_sonora_promedio = datos['Noise_Level'].mean()
         return round(costo_promedio, 2), round(contaminacion_sonora_promedio, 2)
     return 0, 0
 
@@ -73,10 +70,13 @@ presupuesto_cliente = st.number_input('Ingresa tu presupuesto (en dólares):', m
 # Mostrar autos recomendados dentro del presupuesto
 if presupuesto_cliente > 0:
     st.write(f'Autos recomendados dentro de tu presupuesto de ${presupuesto_cliente}:')
-    
+
     # Filtrar los autos dentro del presupuesto
     autos_recomendados = df_costos[df_costos['resale_price'] <= presupuesto_cliente].sort_values(by='resale_price').head(5)
-    
+
+    # Verificación de autos recomendados
+    st.write(df_costos[['full_name', 'resale_price']].head(10))  # Para ver si los precios están correctos
+
     # Si hay autos que cumplen el criterio
     if not autos_recomendados.empty:
         st.write(autos_recomendados[['full_name', 'registered_year', 'fuel_type', 'resale_price']].rename(
