@@ -8,6 +8,9 @@ model = joblib.load('./Modelos_ML/random_forest_regressor.joblib')
 # Cargar el dataset principal
 df_costos = pd.read_csv('./Data/car_resale_prices_clean.csv')
 
+# Verificar que resale_price sea numérico
+df_costos['resale_price'] = pd.to_numeric(df_costos['resale_price'], errors='coerce')
+
 # Cargar el dataset de costos operacionales
 df = pd.read_csv('./Data/costo_operacional_vehiculos_clean.csv', sep=',')
 
@@ -23,7 +26,7 @@ def categorize_vehicle(row):
         return 'Eléctrico'
     else:
         return 'Híbrido'
-    
+
 def categorize_vehicle2(row):
     if row['fuel_type'] in ['Diesel', 'Petrol', 'Petrol/LPG']:
         return 'Convencional'
@@ -67,15 +70,22 @@ auto_type = st.selectbox('Selecciona el tipo de auto:', ['Convencional', 'Híbri
 # Entrada del presupuesto por parte del cliente
 presupuesto_cliente = st.number_input('Ingresa tu presupuesto (en dólares):', min_value=0)
 
+# Verificación de tipo de datos
+st.write(df_costos[['full_name', 'resale_price']].dtypes)
+st.write(f"Presupuesto Cliente: {presupuesto_cliente}, Tipo: {type(presupuesto_cliente)}")
+
 # Mostrar autos recomendados dentro del presupuesto
 if presupuesto_cliente > 0:
     st.write(f'Autos recomendados dentro de tu presupuesto de ${presupuesto_cliente}:')
 
     # Filtrar los autos dentro del presupuesto
-    autos_recomendados = df_costos[df_costos['resale_price'] <= presupuesto_cliente].sort_values(by='resale_price').head(5)
+    autos_filtrados = df_costos[df_costos['resale_price'] <= presupuesto_cliente]
+    
+    # Mostrar autos filtrados para depuración
+    st.write(autos_filtrados[['full_name', 'resale_price']])
 
-    # Verificación de autos recomendados
-    st.write(df_costos[['full_name', 'resale_price']].head(10))  # Para ver si los precios están correctos
+    # Ordenar y mostrar los 5 primeros
+    autos_recomendados = autos_filtrados.sort_values(by='resale_price').head(5)
 
     # Si hay autos que cumplen el criterio
     if not autos_recomendados.empty:
