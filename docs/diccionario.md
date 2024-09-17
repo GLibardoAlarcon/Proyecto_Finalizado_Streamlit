@@ -26,6 +26,9 @@
 
 - [**yellow_tripdata.parquet**](#yellow_tripdata.parquet)
 
+- [**car_resale_prices_clean.csv**](#car_resale_prices_clean.csv)
+
+
 
 <a id="air_quality_cleaned.parquet"><b>air_quality_cleaned.parquet</b></a>  
 
@@ -198,3 +201,14 @@
 - **duration_binned**: Categoría de la duración del viaje (String)
 - **hour_of_day**: Hora del día en que comenzó el viaje (Integer)
 - **fare_binned**: Categoría del costo del viaje (String)
+
+<a id="car_resale_prices_clean.csv"><b>car_resale_prices_clean.csv</b></a>
+
+### 2. **Car Resale Prices**
+
+- Full_Name: Nombre completo del modelo del automóvil (marca y modelo)
+- Registered_Year: Año en que el automóvil fue registrado
+- Transmission_Type: Tipo de transmisión del automóvil (Manual o Automático)
+- Fuel_Type: Tipo de combustible utilizado por el automóvil (Petrol, Diesel, CNG)
+- Max_Power: Potencia máxima del motor en caballos de fuerza (bhp)
+- Resale_Price: Precio de reventa del automóvil en dólares estadounidenses

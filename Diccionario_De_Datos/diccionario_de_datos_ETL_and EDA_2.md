@@ -11,3 +11,12 @@ Estos datos se obtuvieron de Kaggle muestra datos de automoviles indicando detal
 - Electric_Cost : Costo eléctrico (en GBP): Costo de la electricidad para operar el vehículo, en libras esterlinas.
 - Total_Cost : Costo total (en GBP): Suma de los costos de combustible y eléctrico, en libras esterlinas.
 - Noise_Level : Nivel de ruido (en dB): Nivel de ruido producido por el vehículo, medido en decibelios.
+
+# 2. **Car Resale Prices**
+
+- Full_Name: Nombre completo del modelo del automóvil (marca y modelo)
+- Registered_Year: Año en que el automóvil fue registrado
+- Transmission_Type: Tipo de transmisión del automóvil (Manual o Automático)
+- Fuel_Type: Tipo de combustible utilizado por el automóvil (Petrol, Diesel, CNG)
+- Max_Power: Potencia máxima del motor en caballos de fuerza (bhp)
+- Resale_Price: Precio de reventa del automóvil en dólares estadounidenses
