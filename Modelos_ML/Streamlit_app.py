@@ -63,11 +63,11 @@ if presupuesto_cliente > 0:
 
 # Mostrar detalles del auto seleccionado
 st.write('Detalles del auto seleccionado:')
-autos_list = df_costos['full_name'].unique()
+autos_list = df_costos['Full_Name'].unique()
 selected_auto = st.selectbox('Selecciona un auto:', autos_list)
 
 if selected_auto:
-    auto_data = df_costos[df_costos['full_name'] == selected_auto]
+    auto_data = df_costos[df_costos['Full_Name'] == selected_auto]
     st.write(auto_data[['Full_Name', 'Registered_Year', 'Fuel_Type', 'Resale_Price', 'Vehicle_Type']].rename(
         columns={
             'Full_Name': 'Nombre Completo',
