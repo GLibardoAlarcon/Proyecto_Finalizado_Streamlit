@@ -35,18 +35,19 @@
 
 ### **3. Trips (Yellow, Green, FHV)**
 
-| Atributo            | Tipo de dato   | Descripción                                         | Clave       |
-|---------------------|----------------|-----------------------------------------------------|-------------|
-| `vendor_id`         | Integer        | Identificación del proveedor                        |             |
-| `pickup_datetime`   | Datetime       | Fecha y hora de recogida                            |             |
-| `dropoff_datetime`  | Datetime       | Fecha y hora de entrega                             |             |
-| `passenger_count`   | Float          | Número de pasajeros                                 |             |
-| `trip_distance`     | Float          | Distancia total del viaje                           |             |
-| `total_amount`      | Float          | Importe total del viaje                             |             |
-| `PULocationID`      | Integer        | ID de la ubicación de recogida                      | FK          |
-| `DOLocationID`      | Integer        | ID de la ubicación de entrega                       | FK          |
-| `payment_type`      | Integer        | Método de pago utilizado                            |             |
-| `congestion_surcharge`| Float        | Recargo por congestión                              |             |
+| Atributo              | Tipo de dato   | Descripción                                         | Clave       |
+|-----------------------|----------------|-----------------------------------------------------|-------------|
+| `vendor_id`           | Integer        | Identificación del proveedor                        |             |
+| `type`                | Object         | Tipo de vehículo                                    |             |
+| `pickup_datetime`     | Datetime       | Fecha y hora de recogida                            |             |
+| `dropoff_datetime`    | Datetime       | Fecha y hora de entrega                             |             |
+| `passenger_count`     | Float          | Número de pasajeros                                 |             |
+| `trip_distance`       | Float          | Distancia total del viaje                           |             |
+| `total_amount`        | Float          | Importe total del viaje                             |             |
+| `PULocationID`        | Integer        | ID de la ubicación de recogida                      | FK          |
+| `DOLocationID`        | Integer        | ID de la ubicación de entrega                       | FK          |
+| `payment_type`        | Integer        | Método de pago utilizado                            |             |
+| `congestion_surcharge`| Float          | Recargo por congestión                              |             |
 
 **Relaciones:**
 - `PULocationID` → **Geographic Data** (`geo_join_id`) - Relación con la ubicación geográfica de recogida
