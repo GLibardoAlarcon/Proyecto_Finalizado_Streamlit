@@ -78,23 +78,39 @@ if selected_auto:
         }
     ).round({'Precio en Dólares': 2}))
 
+
+#Segundo modelo de ML1 
+
 # Cargamos el modelo guardado 
 modelo_ML1 = joblib.load('./Modelos_ML/Modelo_ML1.joblib')
-
+# Cargamos el dataset
+df_Vehiculos = pd.read_parquet('./Data/Df_vfed.parquet')
+df_Vehiculos_N = df_Vehiculos[df_Vehiculos['Year'] > 2010]
+df_Vehiculos_F = df_Vehiculos_N[df_Vehiculos_N['CO2 (p/mile)'] >= 0]
+# Realizamos una función para categorizar los vehículos
+def categorizar_vehiculos(row):
+    if row['Alternative Fuel'] == 'Electricity':
+        return 'Híbrido'
+    elif row['Fuel'] == 'Electricity':
+        return 'Eléctrico'
+    elif row['Alternative Fuel'] in ['E85', 'No'] and row['Fuel'] != 'Natural Gas' and row['CO2 (p/mile)'] > 0:
+        return 'Comvencional'
+    else:
+        return 'Gas'
+    
+# Aplicamos la función 
+df_Vehiculos_F['Categoria'] = df_Vehiculos_F.apply(categorizar_vehiculos, axis=1)
+#Obtenemos las marcas de los vehículos 
+Marcas = df_Vehiculos_F['Manufacturer'].unique()
 # Titulo 
 st.title('Recomendación de vehículos con mayor eficiencia energetica')
 
 # Entrada de usuario: año y fabricante
 año = st.number_input('Ingrese el año', min_value=2011, max_value=2024)
-fabricante = st.text_input('Ingrese la marca')
+fabricante = st.selectbox('Ingrese la marca', Marcas)
 
 # Boton para ejecutar la predicción
-if st.button('Obtener recomendaciones'):
-    # Cargamos el dataset
-    df_Vehiculos = pd.read_parquet('./Data/Df_vfed.parquet')
-    df_Vehiculos_N = df_Vehiculos[df_Vehiculos['Year'] > 2010]
-    df_Vehiculos_F = df_Vehiculos_N[df_Vehiculos_N['CO2 (p/mile)'] >= 0] 
-    
+if st.button('Obtener recomendaciones por año y marca'):
     # Filtrar vehiculos por año y fabricante
     Vehiculos_filtrado = df_Vehiculos_F[(df_Vehiculos_F['Year'] == año) & (df_Vehiculos_F['Manufacturer'] == fabricante)]
 
@@ -112,7 +128,30 @@ if st.button('Obtener recomendaciones'):
         vehiculos_recomendados = Vehiculos_filtrado.sort_values(by='Eficiencia', ascending=False).head(5)
         # Mostrar los 5 vehículos recomendados 
         st.write('Los 5 vehículos mas eficientes energeticamente son:')
-        st.dataframe(vehiculos_recomendados[['Year', 'Manufacturer', 'Miles per gallon (mpg)', 'CO2 (p/mile)', 'FuelCost', 'Fuel', 'Category']])
-    else:
+        st.dataframe(vehiculos_recomendados[['Year', 'Manufacturer', 'Miles per gallon (mpg)', 'CO2 (p/mile)', 'FuelCost', 'Fuel', 'Categoria']])
+    else: 
         st.write('No se encontraron vehículos que cumplan con ese citerio')
 
+# Boton de recomandaciones por año
+
+if st.button('Obtener recomendaciones por año'):
+    # Filtrar vehiculos por año 
+    Vehiculos_filtrado = df_Vehiculos_F[(df_Vehiculos_F['Year'] == año) ]
+
+    # Verificar si hay vehículos que cumplar con esta condición 
+    if len(Vehiculos_filtrado) > 0:
+        #Estandarizamos las caracteristicas
+        X = Vehiculos_filtrado[['Year', 'Miles per gallon (mpg)', 'CO2 (p/mile)', 'FuelCost']]
+        scaler = StandardScaler()
+        X_scaled = scaler.fit_transform(X)
+        # Hacemos las predicciones con el modelo 
+        predicciones = modelo_ML1.predict(X_scaled)
+        # Añadimos las predicciones al dataframe
+        Vehiculos_filtrado['Eficiencia'] = predicciones
+        # Ordenas por eficiencia de mayor a menor
+        vehiculos_recomendados = Vehiculos_filtrado.sort_values(by='Eficiencia', ascending=False).head(5)
+        # Mostrar los 5 vehículos recomendados 
+        st.write('Los 5 vehículos mas eficientes energeticamente son:')
+        st.dataframe(vehiculos_recomendados[['Year', 'Manufacturer', 'Miles per gallon (mpg)', 'CO2 (p/mile)', 'FuelCost', 'Fuel', 'Categoria']])
+    else: 
+        st.write('No se encontraron vehículos que cumplan con ese citerio')
