@@ -13,5 +13,5 @@ Estos datos se obtuvieron del Departamento de Energia de los EEUU y muestra una 
 - FuelCostA - Costo de Combustible Alternativo  
 - Fuel - Combustible
 - Category - Categoria Auto
-- atvType: tipo de combustible alternativo o vehiculo de tecnología avanzada  
+- atvType - tipo de combustible alternativo o vehiculo de tecnología avanzada  
 - AlternativeFuel - Combustible Alternativo
