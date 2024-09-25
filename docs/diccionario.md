@@ -108,7 +108,8 @@
 - **FuelCost**: Costo de Combustible Anual basado on 15,000 millas, 55% conduciendo ciudad, precio del combustible usado. (Float)   
 - **FuelCostA**: Costo de Combustible Alternativo Anual basado on 15,000 millas, 55% conduciendo ciudad, precio del combustible usado. (Float)  
 - **Fuel**: los diferentyes tipos de combustible (Premium gasoline, Regular gasoline, Electricity, Midgrade gasoline, Diesel, Natural gas)
-- **Category**: Clase de tamaño del vehículo (Object)  
+- **Category**: Clase de tamaño del vehículo (Object) 
+- **atvType**: tipo de combustible alternativo o vehiculo de tecnología avanzada 
 - **AlternativeFuel**: Combustible Alternativo para vehiculos hibridos (e.g. E85, Electricity, CNG, LPG). Para convencionales 'No' (Object)
 
 <a id="energy_clean.csv"><b>energy_clean.csv</b></a>
@@ -204,11 +205,11 @@
 
 <a id="car_resale_prices_clean.csv"><b>car_resale_prices_clean.csv</b></a>
 
-### 2. **Car Resale Prices**
+### Car Resale Prices
 
-- Full_Name: Nombre completo del modelo del automóvil (marca y modelo)
-- Registered_Year: Año en que el automóvil fue registrado
-- Transmission_Type: Tipo de transmisión del automóvil (Manual o Automático)
-- Fuel_Type: Tipo de combustible utilizado por el automóvil (Petrol, Diesel, CNG)
-- Max_Power: Potencia máxima del motor en caballos de fuerza (bhp)
-- Resale_Price: Precio de reventa del automóvil en dólares estadounidenses
+- **Full_Name:** Nombre completo del modelo del automóvil (marca y modelo)
+- **Registered_Year:** Año en que el automóvil fue registrado
+- **Transmission_Type:** Tipo de transmisión del automóvil (Manual o Automático)
+- **Fuel_Type:** Tipo de combustible utilizado por el automóvil (Petrol, Diesel, CNG)
+- **Max_Power:** Potencia máxima del motor en caballos de fuerza (bhp)
+- **Resale_Price:** Precio de reventa del automóvil en dólares estadounidenses
