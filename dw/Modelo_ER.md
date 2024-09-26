@@ -118,14 +118,15 @@
 
 ### **8. car_resale_prices**
 
-| Atributo            | Tipo de dato   | Descripción                                         | Clave       |
-|---------------------|----------------|-----------------------------------------------------|-------------|
-| `full_name`         | Object         | Nombre completo (marca y modelo)                    | FK          |
-| `registred_year`    | Object         | Año registrado                                      |             |
-| `transmission_type` | Float          | Tipo de transmisión (Manual o Automático)           |             |
-| `fuel_type`         | Float          | Tipo de combustible                                 |             |
-| `max_power`         | Float          | Potencia máxima del motor	                         |             |
-| `resale_price`      | Float          | Precio de reventa en USD      	                     |             |
+| Atributo              | Tipo de dato   | Descripción                                         | Clave       |
+|-----------------------|----------------|-----------------------------------------------------|-------------|
+| `full_name`           | Object         | Nombre completo (marca y modelo)                    | FK          |
+| `registred_year`      | Object         | Año registrado                                      |             |
+| `transmission_type`   | Float          | Tipo de transmisión (Manual o Automático)           |             |
+| `fuel_type`           | Float          | Tipo de combustible                                 |             |
+| `max_power`           | Float          | Potencia máxima del motor	                       |             |
+| `resale_price`        | Float          | Precio de reventa en USD      	                   |             |
+| `unique_resale_price` | Integer        | Identificador único de la tabla                     |             |
 
 **Relaciones:**
 - `full_name` → **Vehicles** (`model`) - ¿Indicaría que el precio de reventa está asociado a un vehículo específico?
