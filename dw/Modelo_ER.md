@@ -12,6 +12,7 @@
 | `data_value`      | Float          | Valor real del indicador                             |             |
 | `time_period`     | Object         | Período de tiempo al que aplican los datos           |             |
 | `year`            | Integer        | Año en el que se tomaron los datos                   |             |
+| `unique_air`      | Integer        | Identificador unico de la tabla                      |             |
 
 **Relaciones:**
 - Sin relación con otra entidad
@@ -19,15 +20,16 @@
 
 ### **2. vehicles**
 
-| Atributo         | Tipo de dato   | Descripción                                           | Clave       |
-|------------------|----------------|-------------------------------------------------------|-------------|
-| `manuf`          | Object         | Fabricante del vehículo                               |             |
-| `model`          | Object         | Modelo del vehículo                                   | PK          |
-| `fuel_type`      | Object         | Tipo de combustible                                   |             |
-| `fuel_cost`      | Float          | Costo anual del combustible (en GBP)                  |             |
-| `electric_cost`  | Float          | Costo anual eléctrico (en GBP)                        |             |
-| `total_cost`     | Float          | Costo total anual (en GBP)                            |             |
-| `noise_level`    | Float          | Nivel de ruido del vehículo (en dB)                   |             |
+| Atributo          | Tipo de dato   | Descripción                                           | Clave       |
+|-------------------|----------------|-------------------------------------------------------|-------------|
+| `manuf`           | Object         | Fabricante del vehículo                               |             |
+| `model`           | Object         | Modelo del vehículo                                   | PK          |
+| `fuel_type`       | Object         | Tipo de combustible                                   |             |
+| `fuel_cost`       | Float          | Costo anual del combustible (en GBP)                  |             |
+| `electric_cost`   | Float          | Costo anual eléctrico (en GBP)                        |             |
+| `total_cost`      | Float          | Costo total anual (en GBP)                            |             |
+| `noise_level`     | Float          | Nivel de ruido del vehículo (en dB)                   |             |
+| `unique_vehicles` | Integer        | Identificador único de la tabla                       |             |
 
 **Relaciones:**
 - `model` → **Trips** (`model`) - Relación con la entidad **Trips** mediante el vehículo usado en el viaje
@@ -48,6 +50,7 @@
 | `DOLocationID`        | Integer        | ID de la ubicación de entrega                       | FK          |
 | `payment_type`        | Integer        | Método de pago utilizado                            |             |
 | `congestion_surcharge`| Float          | Recargo por congestión                              |             |
+| `unique_trips`        | Integer        | Identificador único de la tabla                     |             |
 
 **Relaciones:**
 - `PULocationID` → **Geographic Data** (`geo_join_id`) - Relación con la ubicación geográfica de recogida
@@ -62,6 +65,7 @@
 | `geo_join_id`         | Integer        | Identificador geográfico                             | PK          |
 | `latitude`            | Float          | Latitud                                              |             |
 | `longitude`           | Float          | Longitud                                             |             |
+| `unique_geographic`   | Integer        | Identificador único de la tabla                      |             |
 
 **Relaciones:**
 - `geo_join_id` → **Trips** (`PULocationID`, `DOLocationID`) - Relación con viajes realizados en la ubicación
@@ -69,12 +73,13 @@
 
 ### **5. meteorological_data**
 
-| Atributo             | Tipo de dato   | Descripción                                          | Clave       |
-|----------------------|----------------|------------------------------------------------------|-------------|
-| `time`               | Datetime       | Hora                                                 | PK          |
-| `temperature_2m`     | Float          | Temperatura a 2m de altura                           |             |
-| `rain`               | Float          | Lluvia en mm                                         |             |
-| `is_day`             | Object         | Indica si es de día                                  |             |
+| Atributo                | Tipo de dato   | Descripción                                          | Clave       |
+|-------------------------|----------------|------------------------------------------------------|-------------|
+| `time`                  | Datetime       | Hora                                                 | PK          |
+| `temperature_2m`        | Float          | Temperatura a 2m de altura                           |             |
+| `rain`                  | Float          | Lluvia en mm                                         |             |
+| `is_day`                | Object         | Indica si es de día                                  |             |
+| `unique_meteorological` | Integer        | Identificador único de la tabla                      |             |
 
 **Relaciones:**
 - `time` → **Trips** (`pickup_datetime`) - Relación con viajes en función del clima durante el trayecto	
@@ -90,6 +95,7 @@
 | `city`               | Object         | Ciudad                                               |             |
 | `state`              | Object         | Estado                                               |             |
 | `fuel_type_code`     | Object         | Código de tipo de combustible                        | PK          |
+| `unique_stations`    | Integer        | Identificador único de la tabla                      |             |
 
 **Relaciones:**
 - `fuel_type_code` → **Vehicles** (`fuel_type`) - Relación con el tipo de combustible de los vehículos
@@ -97,13 +103,14 @@
 
 ### **7. fuel_economy_data**
 
-| Atributo              | Tipo de dato   | Descripción                                          | Clave       |
-|-----------------------|----------------|------------------------------------------------------|-------------|
+| Atributo              | Tipo de dato   | Descripción                                         | Clave       |
+|-----------------------|----------------|-----------------------------------------------------|-------------|
 | `manufacturer`        | Object         | Productor del vehículo                              |             |
 | `model`               | Object         | Modelo del vehículo                                 | PK          |
 | `miles_per_gallon`    | Float          | Millas por galón                                    |             |
 | `co2_per_mile`        | Float          | Emisiones de CO2 por milla                          |             |
 | `fuel_cost`           | Float          | Costo de combustible anual                          |             |
+| `unique_economy_data` | Integer        | Identificador único de la tabla                     |             |
 
 **Relaciones:**
 - `model` → **Vehicles** (`model`) - Relación con datos de vehículos
@@ -111,14 +118,15 @@
 
 ### **8. car_resale_prices**
 
-| Atributo            | Tipo de dato   | Descripción                                         | Clave       |
-|---------------------|----------------|-----------------------------------------------------|-------------|
-| `full_name`         | Object         | Nombre completo (marca y modelo)                    | FK          |
-| `registred_year`    | Object         | Año registrado                                      |             |
-| `transmission_type` | Float          | Tipo de transmisión (Manual o Automático)           |             |
-| `fuel_type`         | Float          | Tipo de combustible                                 |             |
-| `max_power`         | Float          | Potencia máxima del motor	                         |             |
-| `resale_price`      | Float          | Precio de reventa en USD      	                     |             |
+| Atributo              | Tipo de dato   | Descripción                                         | Clave       |
+|-----------------------|----------------|-----------------------------------------------------|-------------|
+| `full_name`           | Object         | Nombre completo (marca y modelo)                    | FK          |
+| `registred_year`      | Object         | Año registrado                                      |             |
+| `transmission_type`   | Float          | Tipo de transmisión (Manual o Automático)           |             |
+| `fuel_type`           | Float          | Tipo de combustible                                 |             |
+| `max_power`           | Float          | Potencia máxima del motor	                       |             |
+| `resale_price`        | Float          | Precio de reventa en USD      	                   |             |
+| `unique_resale_price` | Integer        | Identificador único de la tabla                     |             |
 
 **Relaciones:**
 - `full_name` → **Vehicles** (`model`) - ¿Indicaría que el precio de reventa está asociado a un vehículo específico?
