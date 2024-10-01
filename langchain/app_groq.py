@@ -54,7 +54,7 @@ def generate_response(user_type, question):
             return "Reemplazar tu vehículo actual por un auto híbrido puede resultar en un ahorro significativo en combustible y mantenimiento. En promedio, los autos híbridos son más eficientes en combustible que los vehículos de gasolina tradicionales. Además, muchos gobiernos ofrecen incentivos fiscales y subsidios para conductores de vehículos híbridos, lo que podría aumentar aún más tus ahorros. Para una estimación más precisa, podemos revisar tu consumo actual de combustible y los costos operativos de ambos tipos de vehículos. En resumen, podrías ahorrar hasta un 30% en combustible si cambias a un auto híbrido."
         else:
             # Llamada a la IA
-            messages = [{"role": "system", "content": f"Ponete en rol de asistente para un {user_type} de Uber, tené en cuenta que deberías estar conectado a la base de datos del {user_type} pero como todavía se encuentra en fase beta, no es posible responder con datos reales aun así le ofreces una alternativa coherente de respuesta."}]
+            messages = [{"role": "system", "content": f"Ponete en rol de asistente para un {user_type} de Uber, tené en cuenta que deberías estar conectado a la base de datos del {user_type} en Arcope, pero como todavía se encuentra en fase beta no es posible responder con datos reales. Aún así le ofrecés una alternativa coherente de respuesta. Si la pregunta esta fuera de conexto recordale que sos un aistente virtual para uber pero que no tenés problemas de conversar de otros temas."}]
             
             # Añadir el historial de conversación al mensaje
             for message in st.session_state['messages']:
@@ -125,7 +125,7 @@ def chat():
 
             if st.button("Enviar pregunta manual"):
                 # Llamada a la IA para la pregunta manual
-                messages = [{"role": "system", "content": f"Ponete en rol de asistente para un {user_type} de Uber, tené en cuenta que deberías estar conectado a la base de datos del {user_type} pero como todavía se encuentra en fase beta, no es posible responder con datos reales aun así le ofreces una alternativa coherente de respuesta."}]
+                messages = [{"role": "system", "content": f"Ponete en rol de asistente para un {user_type} de Uber, tené en cuenta que deberías estar conectado a la base de datos del {user_type} en Arcope, pero como todavía se encuentra en fase beta no es posible responder con datos reales. Aún así le ofrecés una alternativa coherente de respuesta. Si la pregunta esta fuera de conexto recordale que sos un aistente virtual para uber pero que no tenés problemas de conversar de otros temas."}]
                 
                 # Añadir el historial de conversación al mensaje
                 for message in st.session_state['messages']:
