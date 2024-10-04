@@ -102,6 +102,7 @@ def categorizar_vehiculos(row):
 df_Vehiculos_F['Categoria'] = df_Vehiculos_F.apply(categorizar_vehiculos, axis=1)
 #Obtenemos las marcas de los vehículos 
 Marcas = df_Vehiculos_F['Manufacturer'].unique()
+Marcas.inset(0, 'Todos')
 # Titulo 
 st.title('Recomendación de vehículos con mayor eficiencia energetica')
 
@@ -109,11 +110,7 @@ st.title('Recomendación de vehículos con mayor eficiencia energetica')
 año = st.number_input('Ingrese el año', min_value=2011, max_value=2024)
 fabricante = st.selectbox('Ingrese la marca', Marcas)
 
-# Boton para ejecutar la predicción
-if st.button('Obtener recomendaciones por año y marca'):
-    # Filtrar vehiculos por año y fabricante
-    Vehiculos_filtrado = df_Vehiculos_F[(df_Vehiculos_F['Year'] == año) & (df_Vehiculos_F['Manufacturer'] == fabricante)]
-
+def eficiencia (Vehiculos):
     # Verificar si hay vehículos que cumplar con esta condición 
     if len(Vehiculos_filtrado) > 0:
         #Estandarizamos las caracteristicas
@@ -127,10 +124,21 @@ if st.button('Obtener recomendaciones por año y marca'):
         # Ordenas por eficiencia de mayor a menor
         vehiculos_recomendados = Vehiculos_filtrado.sort_values(by='Eficiencia', ascending=False).head(5)
         # Mostrar los 5 vehículos recomendados 
-        st.write('Los 5 vehículos mas eficientes energeticamente son:')
-        st.dataframe(vehiculos_recomendados[['Year', 'Manufacturer', 'Miles per gallon (mpg)', 'CO2 (p/mile)', 'FuelCost', 'Fuel', 'Categoria']])
+        return st.write('Los 5 vehículos mas eficientes energeticamente son:')
+        return st.dataframe(vehiculos_recomendados[['Year', 'Manufacturer', 'Miles per gallon (mpg)', 'CO2 (p/mile)', 'FuelCost', 'Fuel', 'Categoria']])
     else: 
-        st.write('No se encontraron vehículos que cumplan con ese citerio')
+        return st.write('No se encontraron vehículos que cumplan con ese citerio')
+
+# Boton para ejecutar la predicción
+if st.button('Obtener recomendaciones por año y marca'):
+    if Marcas != 'Todos':
+       # Filtrar vehiculos por año y fabricante
+       Vehiculos_filtrado = df_Vehiculos_F[(df_Vehiculos_F['Year'] == año) & (df_Vehiculos_F['Manufacturer'] == fabricante)]
+       eficiencia(Vehiculos_filtrado)
+    else:
+        Vehiculos_filtrado = df_Vehiculos_F
+        eficiencia(Vehiculos_filtrado)
+
 
 # Boton de recomandaciones por año
 
