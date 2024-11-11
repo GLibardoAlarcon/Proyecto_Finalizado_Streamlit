@@ -1,0 +1,10 @@
+nltk
+numpy
+pandas
+requests
+streamlit
+Pillow
+gensim
+scipy
+scikit-learn
+plotly
